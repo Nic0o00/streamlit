@@ -8,4 +8,4 @@ scikit_learn==1.7.2
 scipy==1.16.2
 sentence_transformers==5.1.0
 transformers==4.56.1
-#test
+PyMuPDF==1.22.5
