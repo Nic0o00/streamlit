@@ -2,13 +2,13 @@ import os
 import streamlit as st
 import pandas as pd
 
-from treatment.extract_text import extract_text_from_pdf
-from treatment.detect_lang import detect_language
-from treatment.translate import translate_text
-from vectorisation.vectorize_text import vectorize_text
-from ml.techno.predict_techno import predict_tech
-from ml.domain.predict_domain import predict_domain
-from ml.country.predict_country import predict_country
+from src.treatment.extract_text import extract_text_from_pdf
+from src.treatment.detect_lang import detect_language
+from src.treatment.translate import translate_text
+from src.vectorisation.vectorize_text import vectorize_text
+from src.ml.techno.predict_techno import predict_tech
+from src.ml.domain.predict_domain import predict_domain
+from src.ml.country.predict_country import predict_country
 
 # --- Dossiers ---
 TRANSLATED_DIRECTORY = os.path.join(os.path.dirname(__file__), "data", "processed", "translated")
