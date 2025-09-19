@@ -1,0 +1,9 @@
+{
+    "results": {
+        "RandomForest": 0.028622540250447227,
+        "LogisticRegression": 0.048582995951417005,
+        "LinearSVC": 0.05128205128205129
+    },
+    "best_model": "LinearSVC",
+    "best_score": 0.05128205128205129
+}

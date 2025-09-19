@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.treatment.translate</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.treatment.html" class="white">treatment</a>.translate</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Ctreatment%5Ctranslate.py">c:\users\nicol\desktop\project_scoringapp\src\treatment\translate.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;de&nbsp;traduction&nbsp;de&nbsp;texte&nbsp;avec&nbsp;gestion&nbsp;de&nbsp;grands&nbsp;textes.<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;utilise&nbsp;l'API&nbsp;Google&nbsp;Translator&nbsp;pour&nbsp;traduire&nbsp;automatiquement<br>
+un&nbsp;texte&nbsp;vers&nbsp;une&nbsp;langue&nbsp;cible,&nbsp;en&nbsp;découpant&nbsp;les&nbsp;textes&nbsp;trop&nbsp;longs<br>
+pour&nbsp;éviter&nbsp;les&nbsp;limites&nbsp;de&nbsp;taille&nbsp;de&nbsp;l'API.&nbsp;Le&nbsp;module&nbsp;est&nbsp;robuste&nbsp;et<br>
+retourne&nbsp;le&nbsp;texte&nbsp;original&nbsp;en&nbsp;cas&nbsp;d'erreur.</span></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-translate_text"><strong>translate_text</strong></a>(text, target='en', max_chunk_size=4500)</dt><dd><span class="code">Traduit&nbsp;un&nbsp;texte&nbsp;vers&nbsp;la&nbsp;langue&nbsp;cible,&nbsp;avec&nbsp;découpage&nbsp;si&nbsp;nécessaire.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+text&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Le&nbsp;texte&nbsp;source&nbsp;à&nbsp;traduire.<br>
+target&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Code&nbsp;de&nbsp;la&nbsp;langue&nbsp;cible&nbsp;(par&nbsp;défaut&nbsp;'en'&nbsp;pour&nbsp;anglais).<br>
+max_chunk_size&nbsp;:&nbsp;int,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Taille&nbsp;maximale&nbsp;d'un&nbsp;segment&nbsp;à&nbsp;traduire&nbsp;d'un&nbsp;coup&nbsp;(par&nbsp;défaut&nbsp;4500&nbsp;caractères).<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Le&nbsp;texte&nbsp;traduit.&nbsp;Si&nbsp;la&nbsp;traduction&nbsp;échoue,&nbsp;retourne&nbsp;le&nbsp;texte&nbsp;original.<br>
+&nbsp;<br>
+Notes<br>
+-----<br>
+-&nbsp;Le&nbsp;texte&nbsp;est&nbsp;découpé&nbsp;en&nbsp;segments&nbsp;pour&nbsp;gérer&nbsp;les&nbsp;textes&nbsp;trop&nbsp;longs.<br>
+-&nbsp;Le&nbsp;module&nbsp;utilise&nbsp;`deep_translator.GoogleTranslator`&nbsp;avec&nbsp;détection&nbsp;automatique&nbsp;de&nbsp;la&nbsp;langue&nbsp;source.<br>
+-&nbsp;En&nbsp;cas&nbsp;d'erreur&nbsp;lors&nbsp;de&nbsp;la&nbsp;traduction,&nbsp;un&nbsp;message&nbsp;est&nbsp;affiché&nbsp;et&nbsp;le&nbsp;texte&nbsp;original&nbsp;est&nbsp;retourné.</span></dd></dl>
+</td></tr></table>
+</body></html>

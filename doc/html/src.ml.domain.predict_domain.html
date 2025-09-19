@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.domain.predict_domain</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.domain.html" class="white">domain</a>.predict_domain</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Cdomain%5Cpredict_domain.py">c:\users\nicol\desktop\project_scoringapp\src\ml\domain\predict_domain.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;de&nbsp;prédiction&nbsp;de&nbsp;domaine&nbsp;à&nbsp;partir&nbsp;de&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;charge&nbsp;un&nbsp;modèle&nbsp;de&nbsp;classification&nbsp;(Logistic&nbsp;Regression)<br>
+et&nbsp;un&nbsp;encodeur&nbsp;de&nbsp;labels,&nbsp;applique&nbsp;les&nbsp;vecteurs&nbsp;TF-IDF&nbsp;pour&nbsp;prédire<br>
+le&nbsp;domaine&nbsp;de&nbsp;chaque&nbsp;document,&nbsp;et&nbsp;sauvegarde&nbsp;les&nbsp;résultats&nbsp;avec<br>
+les&nbsp;scores&nbsp;de&nbsp;confiance.&nbsp;Il&nbsp;est&nbsp;possible&nbsp;d'utiliser&nbsp;un&nbsp;seuil&nbsp;pour<br>
+retourner&nbsp;'unknown'&nbsp;lorsque&nbsp;la&nbsp;prédiction&nbsp;est&nbsp;incertaine.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-predict_domain"><strong>predict_domain</strong></a>(threshold: float = None)</dt><dd><span class="code">Prédit&nbsp;le&nbsp;domaine&nbsp;pour&nbsp;chaque&nbsp;document&nbsp;à&nbsp;partir&nbsp;de&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+threshold&nbsp;:&nbsp;float,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Seuil&nbsp;de&nbsp;confiance&nbsp;(entre&nbsp;0&nbsp;et&nbsp;1).&nbsp;Si&nbsp;la&nbsp;probabilité&nbsp;maximale&nbsp;pour<br>
+&nbsp;&nbsp;&nbsp;&nbsp;un&nbsp;document&nbsp;est&nbsp;inférieure&nbsp;à&nbsp;ce&nbsp;seuil,&nbsp;la&nbsp;prédiction&nbsp;sera&nbsp;'unknown'.<br>
+&nbsp;<br>
+Notes<br>
+-----<br>
+-&nbsp;Aligne&nbsp;les&nbsp;colonnes&nbsp;des&nbsp;vecteurs&nbsp;sur&nbsp;celles&nbsp;attendues&nbsp;par&nbsp;le&nbsp;modèle.<br>
+-&nbsp;Sauvegarde&nbsp;les&nbsp;résultats&nbsp;dans&nbsp;un&nbsp;fichier&nbsp;CSV&nbsp;avec&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;doc&nbsp;:&nbsp;identifiant&nbsp;du&nbsp;document<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;predicted_domain&nbsp;:&nbsp;domaine&nbsp;prédit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;confidence_score&nbsp;:&nbsp;score&nbsp;de&nbsp;confiance&nbsp;de&nbsp;la&nbsp;prédiction</span></dd></dl>
+</td></tr></table>
+</body></html>

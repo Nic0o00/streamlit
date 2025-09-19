@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+<meta charset='UTF-8'>
+<title>Documentation Projet</title>
+</head>
+<body>
+<h1>Documentation du projet</h1>
+<ul>
+<li><a href='src.ml.country.predict_country.html'>src.ml.country.predict_country.html</a></li>
+<li><a href='src.ml.domain.predict_domain.html'>src.ml.domain.predict_domain.html</a></li>
+</ul>
+</body>
+</html>
