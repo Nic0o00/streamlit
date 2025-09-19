@@ -1,72 +1,91 @@
 """
-Point d'entrée pour générer les USP pour tous les decks.
-Utilise les mots-clés extraits et FLAN-T5-large pour générer des phrases USP.
+USP Generation with Hugging Face Instruct Models (Mistral/LLaMA)
 """
 
 import os
+import re
 import pandas as pd
-from keyword_usp import extract_usp_keywords_from_texts
-from transformers import T5ForConditionalGeneration, T5Tokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 # ---------------------------
-# Charger le modèle FLAN-T5-large
+# Nettoyage du texte
 # ---------------------------
-model_name = "google/flan-t5-large"
-tokenizer = T5Tokenizer.from_pretrained(model_name, legacy=True)
-model = T5ForConditionalGeneration.from_pretrained(model_name)
+def clean_text(text):
+    text = re.sub(r'\S+@\S+', '', text)  # emails
+    text = re.sub(r'http\S+|www\.\S+', '', text)  # urls
+    text = re.sub(r'\b\d+\b', '', text)  # chiffres isolés
+    text = re.sub(r'COPYRIGHT.*|Confidential.*', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'\s+', ' ', text)  # espaces multiples
+    return text.strip()
 
 # ---------------------------
-# Fonction de génération USP à partir des mots-clés
+# Charger modèle Hugging Face
 # ---------------------------
-def generate_usp_from_keywords(keywords):
-    keywords = [k for k in keywords if k]
-    if not keywords:
+# ⚠️ Mets ici le modèle que tu veux tester : 
+# - "mistralai/Mistral-7B-Instruct-v0.2"
+# - "meta-llama/Llama-2-7b-chat-hf"
+# (les poids se téléchargent automatiquement)
+model_name = "mistralai/Mistral-7B-Instruct-v0.2"
+
+print(f"🔄 Loading model {model_name}...")
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    device_map="auto",  # GPU si dispo, CPU sinon
+    torch_dtype="auto"
+)
+
+generator = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    max_new_tokens=80,
+    temperature=0.7,
+    top_p=0.9
+)
+
+# ---------------------------
+# Génération USP
+# ---------------------------
+def generate_usp_from_text(text):
+    text = clean_text(text)
+    if not text or len(text) < 20:
         return "USP could not be generated"
 
-    # Prompt explicite pour guider la génération
     prompt = (
-        f"You are an expert startup analyst. Using the following keywords, "
-        f"write a single, concise, clear Unique selling proposition (USP) sentence of the startup's main value proposition to present to an investor. "
-        f"Focus only on products, services, or innovations. "
-        f"I want a short sentence between 10 and 20 words presenting the USP. "
-        f"Do NOT include names, numbers, emails, or legal/confidential info. "
-        f"Keywords: {', '.join(keywords)}"
+        "A Unique Selling Proposition (USP) is a single, short, persuasive sentence "
+        "that explains why a customer should choose this startup over competitors.\n"
+        "It must highlight the UNIQUE benefit for the customer, not just describe the product.\n\n"
+        f"Startup deck text:\n{text}\n\n"
+        "Write ONE clear USP sentence (under 25 words):"
     )
 
-    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=512)
-    outputs = model.generate(
-        **inputs,
-        max_length=60,
-        do_sample=True,
-        temperature=0.7,
-        top_p=0.9
-    )
-    usp = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    outputs = generator(prompt)
+    usp = outputs[0]["generated_text"].split("USP sentence:")[-1].strip()
     return usp
 
 # ---------------------------
-# Configuration dossiers
+# Pipeline fichiers
 # ---------------------------
 base_dir = os.path.dirname(__file__)
-data_dir = os.path.join(base_dir, "..", "..", "..", "data", "processed","translated")
-output_dir = os.path.join(base_dir, "..", "..", "..","output")
+data_dir = os.path.join(base_dir, "..", "..", "..", "data", "processed", "translated")
+output_dir = os.path.join(base_dir, "..", "..", "..", "output")
 os.makedirs(output_dir, exist_ok=True)
 output_file = os.path.join(output_dir, "usp_predictions.csv")
 
-# ---------------------------
-# Étape 1 : extraire les mots-clés
-# ---------------------------
-top_n_keywords = 5
-df_keywords = extract_usp_keywords_from_texts(data_dir, top_n=top_n_keywords)
+deck_files = [f for f in os.listdir(data_dir) if f.lower().endswith(".txt")]
+results = []
 
-# ---------------------------
-# Étape 2 : générer la phrase USP
-# ---------------------------
-df_keywords["usp_sentence"] = df_keywords["usp_keywords"].apply(generate_usp_from_keywords)
+for filename in deck_files:
+    path = os.path.join(data_dir, filename)
+    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        text = f.read()
 
-# ---------------------------
-# Étape 3 : sauvegarder les résultats
-# ---------------------------
-df_keywords.to_csv(output_file, index=False)
-print("✅ USP generation completed. Preview:")
-print(df_keywords.head())
+    usp_sentence = generate_usp_from_text(text)
+    results.append({"doc": filename, "usp_sentence": usp_sentence})
+    print(f"[OK] Generated USP for {filename}: {usp_sentence}")
+
+df_results = pd.DataFrame(results)
+df_results.to_csv(output_file, index=False)
+print(f"✅ USP generation completed. Results saved in {output_file}")
+print(df_results.head())
