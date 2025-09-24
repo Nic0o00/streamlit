@@ -48,13 +48,13 @@ def process_directory(data_dir: str, output_csv: str):
                 text = f.read().strip()
 
             if len(text) < 20:
-                print(f"⚠️ Ignored {filename}: texte trop court")
+                print(f"Ignored {filename}: texte trop court")
                 continue
 
             usp = generate_usp(text)
             docs.append(filename)
             usps.append(usp)
-            print(f"✅ {filename} → {usp}")
+            print(f"{filename} → {usp}")
 
     df = pd.DataFrame({"doc": docs, "USP": usps})
     df.to_csv(output_csv, index=False, encoding="utf-8")

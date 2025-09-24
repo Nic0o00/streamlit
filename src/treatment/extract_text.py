@@ -1,37 +1,36 @@
 import fitz
 import re
-from io import BytesIO
 
 def normalize_text(text):
+    """
+    Normalise le texte : minuscules, retire les caractères spéciaux,
+    remplace les espaces multiples par un seul espace.
+    """
     text = text.lower()
     text = re.sub(r'[^a-z0-9àâéèêôùç\- ]', ' ', text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
-def extract_text_from_pdf(uploaded_file):
+def extract_text_from_pdf(pdf_path):
     """
-    Extrait le texte d'un PDF uploadé via Streamlit et le normalise.
-
+    Extrait le texte d'un PDF depuis son chemin et ajoute des séparateurs de slide.
+    
     Parameters
     ----------
-    uploaded_file : UploadedFile
-        Fichier PDF uploadé via st.file_uploader()
-
+    pdf_path : str
+        Chemin vers le fichier PDF.
+    
     Returns
     -------
     str
-        Texte extrait et normalisé.
+        Texte normalisé avec un séparateur "---slide---" entre les pages.
     """
-    # Convertir le fichier uploadé en flux mémoire
-    pdf_bytes = uploaded_file.read()
-    pdf_stream = BytesIO(pdf_bytes)
-
-    # Ouvrir le PDF depuis le flux mémoire
-    doc = fitz.open(stream=pdf_stream, filetype="pdf")
-
+    doc = fitz.open(pdf_path)
     text = ""
+
     for page in doc:
-        text += page.get_text()
+        page_text = page.get_text()
+        text += page_text + "\n---slide---\n"  # marqueur de slide
 
     text_clean = normalize_text(text)
     return text_clean
