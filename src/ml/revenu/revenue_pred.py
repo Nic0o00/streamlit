@@ -39,17 +39,15 @@ for filename in os.listdir(input_dir):
         # Prompt enrichi
         prompt = (
                     "You are an expert analyzing startup pitch decks. "
-                    "Classify the revenue model of the following startup as one of the three categories ONLY:\n"
-                    "- recurring: subscription-based, SaaS, memberships, or other recurring payments (mostly soft products).\n"
-                    "- licensing: revenue from software licenses, patents, or intellectual property (mostly hard products).\n"
-                    "- one time: single purchase, upfront payment, or one-off fees (mostly hard products).\n\n"
-                    f"The product type is '{prod_type}'. Based on this type, only select the allowed categories:\n"
-                    "  * soft → recurring or licensing\n"
-                    "  * hard → recurring or one time\n"
-                    "  * both → any of the three\n\n"
+                    "Classify the revenue model of the following startup as one of these categories ONLY:\n"
+                    "- recurring: subscription-based, SaaS, memberships, or other recurring payments.\n"
+                    "- licensing: revenue from software licenses, patents, or intellectual property.\n"
+                    "- one time: single purchase, upfront payment, or one-off fees.\n\n"
+                    f"The product type is '{prod_type}'. Only select allowed categories based on this type.\n\n"
                     f"Startup description:\n{text}\n\n"
-                    "Answer with only one word exactly as: licensing, recurring, or one time."
+                    "Answer ONLY with one word: licensing, recurring, or one time."
                 )
+
 
 
         # Tokenize et générer
@@ -57,17 +55,9 @@ for filename in os.listdir(input_dir):
         outputs = model.generate(**inputs, max_new_tokens=10)
         prediction = tokenizer.decode(outputs[0], skip_special_tokens=True).lower().strip()
 
-        # Ajustement basé sur le type produit
-        if prediction not in allowed_types:
-            # remplacer par la catégorie la plus probable selon le type produit
-            if prod_type == "soft":
-                prediction = "recurring"
-            elif prod_type == "hard":
-                prediction = "one time"
-            else:
-                prediction = "recurring"
+        
 
-
+    
         results.append({
             "deck": filename,
             "revenue_type": prediction,
@@ -79,4 +69,4 @@ df = pd.DataFrame(results)
 os.makedirs(os.path.dirname(output_csv), exist_ok=True)
 df.to_csv(output_csv, index=False, encoding="utf-8")
 
-print(f"CSV generated: {output_csv}")
+print(f"CSV generated: {output_csv} \n\n Fin de la prédictions des revenus")
