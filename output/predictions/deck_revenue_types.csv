@@ -1,0 +1,328 @@
+deck,revenue_type,product_type
+247energy.txt,one time,hard
+actblade.txt,one time,hard
+actronika.txt,recurring,both
+adlatusrobotics.txt,one time,hard
+adlc.txt,recurring,both
+aerleum.txt,one time,hard
+aiblox.txt,licensing,soft
+airbooster.txt,one time,hard
+aircision.txt,recurring,hard
+airthium.txt,one time,hard
+aithra.txt,one time,hard
+akryvia.txt,one time,hard
+akvola.txt,one time,hard
+alberts.txt,recurring,both
+aloecell.txt,recurring,hard
+alouette.txt,recurring,soft
+aloxy.txt,recurring,both
+altosolution.txt,recurring,hard
+altransenergy.txt,one time,hard
+amethyste.txt,recurring,soft
+amflow.txt,recurring,soft
+amiraltechnologies.txt,recurring,soft
+anabrid.txt,one time,hard
+ananke.txt,one time,hard
+angara.txt,one time,hard
+anisoprint.txt,recurring,hard
+appsilon.txt,recurring,hard
+aprexsolutions.txt,recurring,soft
+aquilae.txt,recurring,soft
+aredox.txt,one time,hard
+arkcapturesolutions.txt,recurring,hard
+arkeocean.txt,one time,hard
+askforthemoon.txt,recurring,soft
+askforthemoon2.txt,recurring,soft
+astriis.txt,recurring,soft
+atmocoat.txt,recurring,hard
+avoxt.txt,one time,hard
+awakemobility.txt,recurring,soft
+axfenergy.txt,one time,hard
+azteq.txt,recurring,hard
+azteq2.txt,recurring,hard
+batiprint3d.txt,recurring,hard
+beagle.txt,recurring,both
+bianergy2.txt,one time,hard
+biocide.txt,recurring,hard
+blixt.txt,licensing,both
+bloom.txt,recurring,soft
+bluepowersynergy.txt,recurring,hard
+bondzai.txt,recurring,both
+bonidriver.txt,recurring,soft
+borealesenergy.txt,recurring,hard
+brighterbins.txt,recurring,both
+brolz.txt,recurring,soft
+bulane.txt,one time,hard
+carbodown.txt,recurring,hard
+carbon8.txt,one time,hard
+carbyon2.txt,one time,hard
+chemalive.txt,recurring,soft
+chemicalnewtech.txt,one time,hard
+cilkoa.txt,recurring,hard
+cixten.txt,recurring,hard
+clhynn.txt,recurring,hard
+cognifab.txt,recurring,soft
+coldpad.txt,one time,hard
+coldpad2.txt,recurring,hard
+companionenergy.txt,recurring,soft
+comppair.txt,recurring,hard
+comsens.txt,recurring,both
+condugo.txt,recurring,soft
+cosmotech.txt,recurring,soft
+covess.txt,one time,hard
+credoxys.txt,one time,hard
+ctrlenergy.txt,recurring,both
+cybus.txt,recurring,soft
+dacma.txt,one time,hard
+deephawk.txt,recurring,soft
+deloq.txt,recurring,both
+diamfab.txt,recurring,hard
+dimpora.txt,recurring,soft
+dionymer.txt,recurring,hard
+dotocean.txt,recurring,both
+dragonflypads2.txt,recurring,both
+dronematrix.txt,recurring,both
+dropslab.txt,recurring,soft
+dryad.txt,recurring,both
+ecellix.txt,one time,hard
+echemicles.txt,recurring,hard
+eco2grow.txt,recurring,soft
+ecobot.txt,recurring,both
+ecop.txt,one time,hard
+edgetech.txt,recurring,both
+edock.txt,recurring,both
+effectsphotonics.txt,recurring,hard
+effitrax.txt,recurring,soft
+ehgroup.txt,recurring,hard
+electriq.txt,one time,hard
+electrochaea.txt,one time,hard
+elugie.txt,recurring,hard
+enadyne.txt,one time,hard
+enhywhere2.txt,one time,hard
+enosis.txt,one time,hard
+enow.txt,recurring,soft
+enprove.txt,recurring,soft
+entent.txt,licensing,hard
+entras.txt,recurring,soft
+esnah.txt,recurring,soft
+eternalpower.txt,one time,hard
+ethernics.txt,recurring,both
+everysens.txt,recurring,soft
+exanodia.txt,recurring,both
+exomatter.txt,recurring,soft
+extracthive.txt,one time,hard
+farwind.txt,recurring,hard
+fibersail2.txt,licensing,hard
+flasc.txt,recurring,hard
+flasc2.txt,recurring,hard
+flyability.txt,recurring,both
+flyability2.txt,recurring,both
+followinspiration.txt,recurring,both
+forecastyai.txt,recurring,soft
+fountainfuel.txt,recurring,hard
+genesink.txt,one time,hard
+genhy.txt,recurring,hard
+geolith.txt,one time,hard
+ghyga.txt,one time,hard
+grandperspective.txt,recurring,soft
+gravithy.txt,recurring,hard
+greengentech.txt,recurring,hard
+greenyenergyag.txt,one time,hard
+grizit.txt,recurring,both
+grownbio.txt,recurring,hard
+h2sys.txt,recurring,hard
+hace.txt,one time,hard
+hawaitech.txt,recurring,both
+hbat.txt,one time,hard
+heliac.txt,recurring,hard
+heliup2.txt,one time,hard
+hevatech.txt,one time,hard
+hexana.txt,recurring,hard
+hexana2.txt,recurring,hard
+highline.txt,recurring,hard
+hiqutediamond.txt,one time,hard
+hoeller.txt,recurring,hard
+holosolis.txt,recurring,hard
+holy.txt,one time,hard
+huskk.txt,one time,hard
+hysilabs.txt,recurring,hard
+hyve.txt,recurring,hard
+hywaves.txt,one time,hard
+icodos.txt,one time,hard
+imsystems.txt,one time,hard
+independentlivingbase.txt,recurring,hard
+ineratec.txt,recurring,hard
+infiniciag.txt,recurring,hard
+inflights.txt,recurring,both
+infrasolid.txt,recurring,hard
+inphocal.txt,one time,hard
+insens.txt,recurring,soft
+intelligentfluids.txt,one time,hard
+internest.txt,recurring,both
+inuse.txt,recurring,soft
+ionics.txt,recurring,hard
+ipsumtek.txt,recurring,both
+iqunet.txt,recurring,soft
+istya.txt,recurring,both
+japet.txt,recurring,both
+keeyaerogel.txt,recurring,hard
+keeyaerogel2.txt,recurring,hard
+keiron.txt,recurring,hard
+kemiwatt.txt,one time,hard
+kheoos.txt,recurring,soft
+komugi.txt,recurring,both
+kooping.txt,recurring,soft
+lancey.txt,recurring,hard
+laserco.txt,recurring,hard
+latannerievegetale.txt,recurring,hard
+leviathandynamics2.txt,recurring,hard
+lichens.txt,recurring,hard
+lionvolt.txt,one time,hard
+lithcote.txt,one time,hard
+litherm.txt,recurring,hard
+maana.txt,one time,hard
+machine2humansolutions.txt,recurring,soft
+magreesource.txt,recurring,hard
+manaa.txt,recurring,hard
+mantispectra.txt,recurring,hard
+mariepoppies.txt,licensing,hard
+matvision.txt,recurring,both
+mcve.txt,recurring,hard
+mcve3.txt,recurring,hard
+mcve4.txt,recurring,hard
+meam.txt,licensing,both
+mecabotix.txt,one time,hard
+mecawareA.txt,recurring,hard
+metaliq.txt,recurring,hard
+mirsense.txt,recurring,hard
+mitis.txt,recurring,hard
+mobenergy.txt,one time,hard
+mobilitywork.txt,recurring,soft
+mobito.txt,recurring,soft
+moiz.txt,recurring,hard
+molecularplasmagroup.txt,one time,hard
+muodim.txt,recurring,both
+myjiminy.txt,recurring,soft
+nanoz.txt,recurring,hard
+nature2need.txt,recurring,both
+neextengineering.txt,one time,hard
+nestwave.txt,one time,hard
+neurala.txt,recurring,both
+nextind.txt,recurring,both
+nexwafe.txt,recurring,hard
+nexxoil.txt,one time,hard
+nexxtlab.txt,recurring,both
+nimbleone.txt,recurring,hard
+nimesis.txt,one time,hard
+novacarbon.txt,recurring,hard
+novali3.txt,licensing,hard
+novocycle.txt,one time,hard
+novomof.txt,one time,hard
+obeia.txt,recurring,soft
+octofan.txt,recurring,hard
+oghji.txt,recurring,both
+ollow.txt,one time,hard
+onewatt.txt,recurring,soft
+oppr.txt,recurring,soft
+otiv.txt,recurring,both
+otiv2.txt,recurring,both
+ouat!.txt,recurring,soft
+oxylum.txt,one time,hard
+packwise.txt,recurring,both
+pathrobotics.txt,recurring,soft
+pepps.txt,recurring,soft
+phoenixai.txt,recurring,soft
+phytonics.txt,licensing,hard
+polypea.txt,one time,hard
+powerlubecontrol.txt,recurring,both
+pozyx.txt,recurring,both
+propellane.txt,recurring,hard
+purenat2.txt,one time,hard
+pydro.txt,recurring,soft
+qualitics.txt,recurring,soft
+reeverse.txt,recurring,soft
+rein4ced.txt,recurring,hard
+rejuice.txt,recurring,hard
+renewind.txt,recurring,hard
+replace.txt,one time,hard
+ridergy.txt,recurring,soft
+rift.txt,one time,hard
+roav7.txt,recurring,both
+rosi.txt,one time,hard
+roth2.txt,recurring,hard
+rovenso.txt,recurring,hard
+sakowin.txt,recurring,hard
+saturnetechnology.txt,recurring,hard
+senergetics.txt,licensing,soft
+senodis.txt,recurring,both
+senorics.txt,one time,hard
+senseven.txt,recurring,soft
+sereema.txt,recurring,soft
+sesam.txt,recurring,soft
+shayp.txt,recurring,soft
+sironatechnologies.txt,recurring,hard
+skydrone.txt,recurring,hard
+sogilis.txt,recurring,soft
+soluterials.txt,one time,hard
+soomiq.txt,recurring,hard
+spark2.txt,one time,hard
+spotlight.txt,recurring,both
+spreeinteractive.txt,recurring,soft
+squairtech.txt,recurring,hard
+staaq.txt,one time,hard
+stabilogreen.txt,recurring,hard
+starcopter.txt,one time,hard
+stargate.txt,one time,hard
+storh.txt,one time,hard
+sublimeenergie.txt,recurring,hard
+sunlion.txt,recurring,hard
+sunmaxx.txt,recurring,hard
+sunmaxx2.txt,one time,hard
+supairvision.txt,licensing,both
+swanh.txt,one time,hard
+swoopenergy.txt,licensing,hard
+sylfen.txt,recurring,hard
+teeptrak2.txt,recurring,soft
+terakalis.txt,recurring,both
+teratonics.txt,one time,hard
+theyeq.txt,licensing,both
+threedy.txt,recurring,soft
+tiamat.txt,recurring,hard
+tihive.txt,recurring,both
+torwash.txt,one time,hard
+tozero.txt,recurring,hard
+tractonomy.txt,recurring,both
+turbit.txt,recurring,soft
+turbulent.txt,one time,hard
+twikit.txt,recurring,soft
+twinsity.txt,recurring,soft
+uavia.txt,recurring,both
+uware.txt,recurring,soft
+uware2.txt,recurring,soft
+uze.txt,recurring,both
+v2i.txt,recurring,both
+variolytics.txt,recurring,both
+vernaio.txt,recurring,soft
+viridianlithium.txt,one time,hard
+visiontechnology.txt,recurring,hard
+visplore.txt,recurring,soft
+vocsens.txt,recurring,hard
+voleatech.txt,recurring,soft
+vulkam.txt,recurring,hard
+wainvame.txt,one time,hard
+waterhorizon.txt,recurring,hard
+waterstuffsun.txt,one time,hard
+watt4ever.txt,one time,hard
+wattalps.txt,recurring,hard
+wayout.txt,recurring,hard
+wespran.txt,one time,hard
+wiidetect.txt,recurring,soft
+windfisher.txt,recurring,hard
+wizata.txt,recurring,soft
+worms2.txt,recurring,hard
+xeryon.txt,recurring,hard
+yazzoom.txt,recurring,soft
+ysenergiesmarines.txt,one time,hard
+zensor.txt,recurring,soft
+zeppsolutions.txt,one time,hard
+zorabots.txt,recurring,soft

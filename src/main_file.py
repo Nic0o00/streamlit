@@ -9,6 +9,7 @@ from vectorisation.vectorize_text import vectorize_text
 from ml.techno.predict_techno import predict_tech
 from ml.domain.predict_domain import predict_domain
 from ml.country.predict_country import predict_country
+from ml.revenu.revenue_pred import revenue_pred
 
 from ml.evaluate import evaluate
 
@@ -53,6 +54,8 @@ predict_tech()
 predict_domain()
 
 predict_country()
+
+revenue_pred()
 
 evaluate("tech")
 evaluate("domain")
