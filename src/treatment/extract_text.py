@@ -6,6 +6,7 @@ def normalize_text(text):
     Normalise le texte : minuscules, retire les caractères spéciaux,
     remplace les espaces multiples par un seul espace.
     """
+    text = text.lower()
     text = re.sub(r'[^a-z0-9àâéèêôùç\- ]', ' ', text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text

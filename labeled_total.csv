@@ -1,329 +1,329 @@
-doc;tech;domain;produit;country;revenu;gotomarket;startup
-247energy.pdf;hard;energy transition;energy storage;benelux;one-time+service;2022;non
-actblade.pdf;hard;energy transition;wind turbine blade;autres;one-time;2024;non
-actronika.pdf;both;others;;france;;;
-adlatusrobotics.pdf;hard;industry 4.0;robot;germany;one-time+service+subscription;2023;oui
-adlc.pdf;both;industry 4.0;;benelux;;;
-aerleum.pdf;hard;energy transition;decarbonization;france;licensing;NA;oui
-aiblox.pdf;hard;industry 4.0;IA;benelux;one-time+service;2022;non
-air booster.pdf;hard;energy transition;;france;one-time+service;2023;non
-aircision.pdf;hard;industry 4.0;;benelux;one-time+service;2025;oui
-airthium.pdf;hard;industry 4.0;;autres;one-time+service;2025;oui
-aithra.pdf;hard;industry 4.0;;france;one-time;2024;non
-akryvia.pdf;hard;new materials;;france;;;
-akvola.pdf;hard;energy transition;;germany;one-time+service;2022;oui
-alberts.pdf;both;others;;benelux;subscription+service;2020;non
-aloecell.pdf;hard;energy transition;;autres;one-time+subscription;NA;non
-alouette.pdf;soft;industry 4.0;;france;subscription;2025;non
-aloxy.pdf;both;industry 4.0;;benelux;one-time+service;NA;non
-altosolution.pdf;hard;energy transition;;france;one-time+service;2024;non
-altransenergy.pdf;hard;industry 4.0;;france;one-time+subscription+service;2024;oui
-amethyste.pdf;soft;industry 4.0;;france;subscription;NA;non
-amflow.pdf;soft;industry 4.0;;benelux;one-time+subscription;2023;non
-amiraltechnologies.pdf;soft;industry 4.0;;france;licensing+service;2024;oui
-anabrid.pdf;hard;new materials;;germany;licensing+one-time;2022;non
-ananke.pdf;hard;energy transition;;france;one-time+service;2023;non
-angara.pdf;soft;energy transition;;benelux;licensing+subscription;2024;oui
-anisoprint.pdf;hard;new materials;;benelux;;;
-appsilon.pdf;hard;others;;benelux;one-time+subscription;2026;non
-aprexsolutions.pdf;soft;industry 4.0;;france;licensing+subscription;2026;non
-aquilae.pdf;soft;industry 4.0;;france;one-time+subscription+service;2017;oui
-aredox.pdf;hard;energy transition;;france;one-time+licensing+service;2020;non
-arkcapturesolutions.pdf;hard;energy transition;;benelux;one-time+service;2027;oui
-arkeocean.pdf;hard;others;;france;one-time+service;NA;non
-askforthemoon.pdf;soft;industry 4.0;;france;subscription;2023;non
-askforthemoon2.pdf;soft;industry 4.0;;france;subscription;2023;oui
-astriis.pdf;soft;industry 4.0;;france;subscription;2027;oui
-atmocoat.pdf;hard;new materials;;germany;one-time+service;2022;non
-avoxt.pdf;hard;energy transition;;benelux;one-time+service;2023;non
-awakemobility.pdf;soft;energy transition;;germany;one-time+subscription+service;NA;non
-axfenergy.pdf;hard;energy transition;;germany;one-time+licensing+service;2028;oui
-azteq.pdf;hard;energy transition;;benelux;one-time+service;2020;non
-azteq2.pdf;hard;energy transition;;benelux;one-time+service;2020;non
-batiprint3d.pdf;hard;industry 4.0;;france;one-time+service;2024;non
-beagle.pdf;both;others;;autres;subscription+service;2022;oui
-bianergy2.pdf;hard;others;;benelux;licensing+subscription;2024;oui
-biocide.pdf;hard;industry 4.0;;autres;one-time+service;2020;oui
-blixt.pdf;both;energy transition;;autres;one-time+licensing+service;NA;non
-bloom.pdf;soft;energy transition;;autres;subscription;2027;oui
-bluepowersynergy.pdf;hard;energy transition;;benelux;one-time+licensing;2020;non
-bondzai.pdf;both;industry 4.0;;france;subscription+licensing;2023;oui
-bonidriver.pdf;soft;others;;germany;one-time+subscription+service;2023;non
-borealesenergy.pdf;hard;energy transition;;france;one-time;2023;non
-brighterbins.pdf;both;energy transition;;benelux;one-time+subscription;2021;non
-brolz.pdf;soft;industry 4.0;;benelux;;;
-bulane.pdf;hard;energy transition;;france;one-time+subscription+service;2023;non
-carbodown.pdf;hard;energy transition;;france;one-time+service;2024;non
-carbon8.pdf;hard;energy transition;;autres;licensing+service;2025;non
-carbyon2.pdf;hard;energy transition;;autres;one-time+service;2030;non
-chemalive.pdf;soft;new materials;;autres;licensing+subscription+service;2021;oui
-chemicalnewtech.pdf;hard;energy transition;;autres;one-time+service;2018;non
-cilkoa.pdf;hard;new materials;;france;licensing+service;2025;non
-cixten.pdf;hard;energy transition;;france;one-time+licensing+service;2025;non
-clhynn.pdf;hard;energy transition;;france;licensing;2027;oui
-cognifab.pdf;soft;industry 4.0;;france;subscription+service;2024;oui
-coldpad.pdf;hard;others;;france;one-time+licensing+service;2022;non
-coldpad2.pdf;hard;others;;france;one-time+licensing+service;2022;non
-companionenergy.pdf;soft;energy transition;;benelux;one-time+subscription+service;2023;non
-comppair.pdf;hard;new materials;;autres;one-time+licensing;2022;non
-comsens.pdf;both;industry 4.0;;benelux;one-time+subscription;2024;non
-condugo.pdf;soft;energy transition;;benelux;licensing+subscription+service;2017;non
-cosmotech.pdf;soft;industry 4.0;;france;licensing+subscription+service;NA;non
-covess.pdf;hard;industry 4.0;;benelux;one-time+licensing;2023;non
-credoxys.pdf;hard;new materials;;germany;one-time+licensing;2022;non
-ctrlenergy.pdf;both;energy transition;;france;one-time+subscription;2022;oui
-cybus.pdf;soft;industry 4.0;;germany;subscription+licensing;2022;non
-dacma.pdf;hard;energy transition;;germany;one-time+service;2024;non
-deephawk.pdf;soft;industry 4.0;;france;one-time+subscription;2022;oui
-deloq.pdf;both;industry 4.0;;benelux;one-time+service;2024;non
-diamfab.pdf;hard;others;;france;one-time+service;2026;non
-dimpora.pdf;soft;new materials;;autres;licensing+one-time+service;NA;oui
-dionymer.pdf;hard;new materials;;france;one-time+service+subscription;2024;non
-dotocean.pdf;both;others;;benelux;one-time+service;NA;non
-dragonflypads2.pdf;both;others;;france;one-time+service;2018;non
-dronematrix.pdf;both;industry 4.0;;benelux;one-time+licensing+service;2020;non
-dropslab.pdf;soft;industry 4.0;;benelux;one-time+subscription+service;2024;oui
-dryad.pdf;both;others;;germany;;;
-ecellix.pdf;hard;energy transition;;autres;service;2025;non
-echemicles.pdf;hard;energy transition;;autres;one-time+service;2026;oui
-eco2grow.pdf;soft;energy transition;;germany;one-time+service;2024;non
-ecobot.pdf;both;industry 4.0;;autres;one-time+service;2023;non
-ecop.pdf;hard;energy transition;;autres;;;
-edgetech.pdf;both;industry 4.0;;france;one-time+service;2021;non
-edock.pdf;both;others;;benelux;one-time+service;2024;non
-effectphotonics.pdf;hard;industry 4.0;;benelux;one-time+service;NA;non
-effitrax.pdf;soft;industry 4.0;;benelux;licensing+one-time+service;2025;non
-ehgroup.pdf;hard;energy transition;;autres;one-time+service;2022;non
-electriq.pdf;hard;energy transition;;autres;one-time+service;2030;non
-electrochaea.pdf;hard;energy transition;;germany;licensing+service;NA;non
-elugie.pdf;hard;energy transition;;benelux;service;2024;non
-enadyne.pdf;hard;energy transition;;germany;one-time+service;2025;non
-enhywhere2.pdf;hard;energy transition;;france;one-time+service+subscription;2025;non
-enosis.pdf;hard;energy transition;;france;one-time+service;2030;non
-enow.pdf;soft;energy transition;;benelux;subscription+service;2019;non
-enprove.pdf;soft;energy transition;;benelux;subscription+service;2023;non
-entent.pdf;hard;energy transition;;france;one-time+licensing;2026;non
-entras.pdf;soft;energy transition;;benelux;one-time+subscription+service;2023;non
-esnah.pdf;soft;others;;benelux;subscription;NA;non
-eternalpower.pdf;hard;energy transition;;germany;one-time+service;NA;oui
-ethernics.pdf;both;energy transition;;benelux;one-time+subscription;2024;non
-everysens.pdf;soft;energy transition;;france;subscription+service;2020;non
-exanodia.pdf;soft;industry 4.0;;france;;;
-exomatter.pdf;soft;industry 4.0;;germany;subscription;2024;oui
-extracthive.pdf;hard;new materials;;france;licensing+service;2026;non
-farwind.pdf;hard;energy transition;;france;one-time+service;2024;oui
-fibersail2.pdf;hard;energy transition;;autres;one-time+service;NA;non
-flasc.pdf;hard;energy transition;;benelux;one-time+service;2024;non
-flasc2.pdf;hard;energy transition;;benelux;one-time+service;2024;non
-flyability.pdf;both;industry 4.0;;autres;one-time+service;NA;non
-flyability2.pdf;both;industry 4.0;;autres;one-time+service;2017;non
-followinspiration.pdf;both;industry 4.0;;autres;one-time+subscription+service;2022;non
-forecastyai.pdf;soft;industry 4.0;;germany;subscription+service;2022;non
-fountainfuel.pdf;hard;energy transition;;benelux;one-time+service;2023;non
-genesink.pdf;hard;new materials;;france;one-time+licensing+service;2024;non
-genhy.pdf;hard;energy transition;;france;one-time+service;2024;oui
-geolith.pdf;hard;others;;france;one-time+service;NA;non
-ghyga.pdf;hard;energy transition;;france;one-time+licensing;NA;non
-grandperspective.pdf;soft;industry 4.0;;germany;service;2024;non
-gravithy.pdf;hard;energy transition;;france;one-time+service;2028;non
-greengentech.pdf;hard;others;;france;one-time+service;2023;non
-greenyenergyag.pdf;hard;energy transition;;autres;one-time+licensing+service;2025;non
-grizit.pdf;hard;industry 4.0;;benelux;one-time+subscription+service;2025;oui
-grownbio.pdf;hard;others;;benelux;one-time+service;2026;oui
-h2sys.pdf;hard;energy transition;;france;one-time+subscription+service;2022;non
-hace.pdf;hard;energy transition;;france;one-time+service;NA;oui
-hawaitech.pdf;both;industry 4.0;;france;one-time+service;2026;non
-hbat.pdf;hard;energy transition;;benelux;one-time+service;2026;non
-heliac.pdf;hard;energy transition;;autres;one-time+service;2019;non
-heliup2.pdf;hard;energy transition;;france;one-time+service;2025;oui
-hevatech.pdf;hard;energy transition;;france;service;2017;non
-hexana.pdf;hard;energy transition;;france;one-time+licensing;NA;non
-hexana2.pdf;hard;energy transition;;france;one-time+licensing;2030;non
-highline.pdf;hard;new materials;;germany;one-time+service;2025;non
-hiqutediamond.pdf;hard;new materials;;france;one-time+service;2028;oui
-hoeller.pdf;hard;energy transition;;germany;one-time+licensing+service;2024;oui
-holosolis.pdf;hard;energy transition;;france;one-time;2027;non
-holy.pdf;hard;new materials;;germany;one-time+subscription+service;2024;oui
-huskk.pdf;hard;industry 4.0;;benelux;one-time+service;NA;oui
-hysilabs.pdf;hard;energy transition;;france;one-time+licensing+service;2027;non
-hyve.pdf;hard;energy transition;;benelux;subscription;2027;non
-hywaves.pdf;hard;energy transition;;autres;licensing;2025;oui
-icodos.pdf;hard;energy transition;;germany;licensing+service;2024;non
-imsystems.pdf;hard;industry 4.0;;benelux;one-time+service;2027;non
-independentlivingbase.pdf;hard;others;;france;service;2022;oui
-ineratec.pdf;hard;energy transition;;germany;one-time+service;2026;non
-infiniciag.pdf;hard;new materials;;germany;NA;2024;non
-inflights.pdf;both;industry 4.0;SaaS;benelux;;2019;oui
-infrasolid.pdf;hard;industry 4.0;;germany;;;
-inphocal.pdf;hard;industry 4.0;;benelux;;;
-insens.pdf;soft;industry 4.0;;benelux;;;
-intelligentfluids.pdf;hard;others;;germany;;;
-internest.pdf;both;others;;france;;;
-inuse.pdf;soft;industry 4.0;;france;;;
-ionics.pdf;hard;new materials;;benelux;;;
-ipsumtek.pdf;both;industry 4.0;;france;;;
-iqunet.pdf;both;industry 4.0;;benelux;;;
-istya.pdf;both;industry 4.0;;france;;;
-japet.pdf;hard;industry 4.0;;france;;;
-keeyaerogel.pdf;hard;new materials;;france;;;
-keeyaerogel2.pdf;hard;new materials;;france;;;
-keiron.pdf;hard;industry 4.0;;benelux;;;
-kemiwatt.pdf;hard;energy transition;;france;;;
-kheoos.pdf;soft;industry 4.0;;france;;;
-komugi.pdf;soft;industry 4.0;;france;;;
-kooping.pdf;soft;industry 4.0;;france;;;
-lancey.pdf;both;energy transition;;france;;;
-laserco.pdf;hard;new materials;;benelux;;;
-latannerievegetale.pdf;hard;others;;france;;;
-leviathandynamics2.pdf;hard;energy transition;;france;;;
-lichens.pdf;hard;new materials;;france;;;
-lionvolt.pdf;hard;others;;benelux;;;
-lithcote.pdf;hard;energy transition;;benelux;;;
-litherm.pdf;hard;energy transition;;germany;;;
-maana.pdf;hard;energy transition;;benelux;;;
-machine2humansolutions.pdf;soft;industry 4.0;;germany;;;
-magreesource.pdf;hard;new materials;;france;;;
-manaa.pdf;hard;energy transition;;benelux;;;
-mantispectra.pdf;hard;industry 4.0;;benelux;;;
-mariepoppies.pdf;hard;others;;benelux;;;
-matvision.pdf;both;industry 4.0;;benelux;;;
-mcve.pdf;hard;industry 4.0;;france;;;
-mcve3.pdf;hard;industry 4.0;;france;;;
-mcve4.pdf;hard;industry 4.0;;france;;;
-meam.pdf;both;others;;benelux;;;
-mecabotix.pdf;hard;industry 4.0;;france;;;
-mecawareA.pdf;hard;energy transition;;france;;;
-metaliq.pdf;hard;energy transition;;germany;;;
-mirsense.pdf;hard;industry 4.0;;france;;;
-mitis.pdf;hard;energy transition;;benelux;;;
-mobenergy.pdf;hard;energy transition;;france;;;
-mobilitywork.pdf;soft;industry 4.0;;france;;;
-mobito.pdf;soft;industry 4.0;;benelux;;;
-moiz.pdf;hard;energy transition;;france;;;
-molecularplasmagroup.pdf;hard;new materials;;benelux;;;
-muodim.pdf;both;energy transition;;france;;;
-myjiminy.pdf;soft;others;;france;;;
-nanoz.pdf;hard;industry 4.0;;france;;;
-nature2need.pdf;both;new materials;;germany;;;
-neextengineering.pdf;hard;energy transition;;france;;;
-nestwave.pdf;hard;industry 4.0;;france;;;
-neurala.pdf;soft;industry 4.0;;autres;;;
-nextind.pdf;both;industry 4.0;;autres;;;
-nexwafe.pdf;hard;energy transition;;germany;;;
-nexxoil.pdf;hard;others;;germany;;;
-nexxtlab.pdf;both;energy transition;;benelux;;;
-nimbleone.pdf;hard;industry 4.0;;france;;;
-nimesis.pdf;hard;new materials;;france;;;
-novacarbon.pdf;hard;new materials;;france;;;
-novali3.pdf;hard;energy transition;;benelux;;;
-novocycle.pdf;hard;energy transition;;autres;;;
-novomof.pdf;hard;new materials;;autres;;;
-obeia.pdf;soft;industry 4.0;;france;;;
-octofan.pdf;hard;others;;france;;;
-oghji.pdf;both;energy transition;;autres;;;
-ollow.pdf;hard;others;;france;;;
-onewatt.pdf;soft;industry 4.0;;benelux;;;
-oppr.pdf;soft;industry 4.0;;benelux;;;
-otiv.pdf;both;industry 4.0;;benelux;;;
-otiv2.pdf;both;industry 4.0;;benelux;;;
-ouat!.pdf;soft;industry 4.0;;benelux;;;
-oxylum.pdf;hard;energy transition;;benelux;;;
-packwise.pdf;both;industry 4.0;;germany;;;
-pathrobotics.pdf;soft;industry 4.0;;autres;;;
-pepps.pdf;soft;industry 4.0;;benelux;;;
-phoenixai.pdf;soft;industry 4.0;;benelux;;;
-phytonics.pdf;hard;energy transition;;germany;;;
-polypea.pdf;hard;new materials;;benelux;;;
-powerlubecontrol.pdf;both;industry 4.0;;benelux;;;
-pozyx.pdf;both;industry 4.0;;benelux;;;
-propellane.pdf;hard;energy transition;;france;;;
-purenat2.pdf;hard;new materials;;france;;;
-pydro.pdf;soft;energy transition;;germany;;;
-qualitics.pdf;soft;energy transition;;benelux;;;
-reeverse.pdf;soft;industry 4.0;;france;;2023;non
-rein4ced.pdf;hard;new materials;;benelux;;;
-rejuice.pdf;hard;energy transition;;benelux;;;
-renewind.pdf;hard;energy transition;;benelux;;;
-replace.pdf;hard;others;;france;;;
-ridergy.pdf;soft;industry 4.0;;germany;;;
-rift.pdf;hard;energy transition;;benelux;;;
-roav7.pdf;both;industry 4.0;;france;;;
-rosi.pdf;hard;energy transition;;france;;;
-roth2.pdf;hard;energy transition;;france;;;
-rovenso.pdf;hard;industry 4.0;;autres;;;
-sakowin.pdf;hard;energy transition;;france;;;
-saturnetechnology.pdf;hard;industry 4.0;;benelux;;;
-senergetics.pdf;soft;industry 4.0;;benelux;;;
-senodis.pdf;both;industry 4.0;;germany;;;
-senorics.pdf;hard;industry 4.0;;germany;;;
-senseven.pdf;soft;industry 4.0;;autres;;;
-sereema.pdf;soft;energy transition;;france;;;
-sesamm.pdf;soft;others;;france;;;
-shayp.pdf;soft;others;;benelux;;;
-sironatechnologies.pdf;hard;energy transition;;benelux;;;
-skydrone.pdf;hard;others;;france;;;
-sogilis.pdf;soft;industry 4.0;;france;;;
-soluterials.pdf;hard;new materials;;germany;;;
-soomiq.pdf;hard;energy transition;;germany;;;
-spark2.pdf;hard;energy transition;;france;;;
-spotlight.pdf;both;industry 4.0;;france;;;
-spreeinteractive.pdf;soft;others;;germany;;;
-squairtech.pdf;hard;new materials;;france;;;
-staaq.pdf;hard;energy transition;;france;;;
-stabilogreen.pdf;hard;new materials;;benelux;;NA;non
-starcopter.pdf;hard;energy transition;;germany;;;
-stargate.pdf;hard;energy transition;;autres;;;
-storh.pdf;hard;energy transition;;autres;;;
-sublimeenergie.pdf;hard;energy transition;;france;;;
-sunlion.pdf;hard;energy transition;;benelux;;;
-sunmaxx.pdf;hard;energy transition;;germany;;;
-sunmaxx2.pdf;hard;energy transition;;germany;;;
-supairvision.pdf;both;energy transition;;france;;;
-swanh.pdf;hard;energy transition;;france;;;
-swoopenergy.pdf;hard;energy transition;;france;;;
-sylfen.pdf;hard;energy transition;;france;;;
-teeptrak2.pdf;both;industry 4.0;;france;;;
-terakalis.pdf;both;industry 4.0;;france;;;
-teratonics.pdf;hard;industry 4.0;;france;;;
-theyeq.pdf;both;industry 4.0;;france;;;
-threedy.pdf;soft;industry 4.0;;germany;;;
-tiamat.pdf;hard;energy transition;;france;;;
-tihive.pdf;both;industry 4.0;;france;;;
-torwash.pdf;hard;energy transition;;benelux;;;
-tozero.pdf;hard;energy transition;;germany;;;
-tractonomy.pdf;both;industry 4.0;;benelux;;;
-turbit.pdf;soft;industry 4.0;;germany;;;
-turbulent.pdf;hard;energy transition;;benelux;;;
-twikit.pdf;soft;industry 4.0;;benelux;;;
-twinsity.pdf;soft;industry 4.0;;germany;;;
-uavia.pdf;both;industry 4.0;;france;;;
-uware.pdf;both;industry 4.0;;benelux;;;
-uware2.pdf;both;industry 4.0;;benelux;;;
-uze.pdf;hard;energy transition;;benelux;;;
-v2i.pdf;both;industry 4.0;;benelux;;;
-variolytics.pdf;both;industry 4.0;;germany;;;
-vddtech.pdf;hard;industry 4.0;;benelux;;;
-vernaio.pdf;soft;industry 4.0;;germany;;;
-viridianlithium.pdf;hard;energy transition;;france;;;
-visiontechnology.pdf;hard;energy transition;;france;;;
-visplore.pdf;soft;industry 4.0;;autres;;;
-vocsens.pdf;hard;industry 4.0;;benelux;;;
-voleatech.pdf;soft;industry 4.0;;germany;;;
-vulkam.pdf;hard;new materials;;france;;;
-wainvame.pdf;hard;industry 4.0;;france;;;
-waterhorizon.pdf;hard;energy transition;;france;;;
-waterstuffsun.pdf;hard;energy transition;;germany;;;
-watt4ever.pdf;hard;energy transition;;benelux;;;
-wattalps.pdf;hard;energy transition;;france;;;
-wayout.pdf;hard;others;;autres;;;
-wespran.pdf;hard;energy transition;;france;;;
-wiidetect.pdf;soft;industry 4.0;;france;;;
-windfisher.pdf;hard;energy transition;;france;;;
-wizata.pdf;soft;industry 4.0;;benelux;;;
-worms2.pdf;hard;new materials;;france;;;
-xeryon.pdf;hard;industry 4.0;;benelux;;;
-yazzoom.pdf;soft;industry 4.0;;benelux;;;
-ysenergiesmarines.pdf;hard;energy transition;;france;;;
-zensor.pdf;soft;industry 4.0;;benelux;;;
-zeppsolutions.pdf;hard;energy transition;;benelux;;;
-zorabots.pdf;soft;industry 4.0;;benelux;;;
+doc;tech;domain;produit;country;revenu;gotomarket;startup;resultat
+247energy.pdf;hard;energy transition;energy storage;benelux;one-time+service;2022;non;No Informations
+actblade.pdf;hard;energy transition;wind turbine blade;autres;one-time;2024;non;Out
+actronika.pdf;both;others;;france;;;;Very
+adlatusrobotics.pdf;hard;industry 4.0;robot;germany;one-time+service+subscription;2023;oui;Very Unfavorable
+adlc.pdf;both;industry 4.0;;benelux;;;;Very Unfavorable
+aerleum.pdf;hard;energy transition;decarbonization;france;licensing;NA;oui;Very Unfavorable
+aiblox.pdf;hard;industry 4.0;IA;benelux;one-time+service;2022;non;Out
+air booster.pdf;hard;energy transition;;france;one-time+service;2023;non;Very Unfavorable
+aircision.pdf;hard;industry 4.0;;benelux;one-time+service;2025;oui;Very Unfavorable
+airthium.pdf;hard;industry 4.0;;autres;one-time+service;2025;oui;Out
+aithra.pdf;hard;industry 4.0;;france;one-time;2024;non;Unfavorable
+akryvia.pdf;hard;new materials;;france;;;;Out
+akvola.pdf;hard;energy transition;;germany;one-time+service;2022;oui;Very Unfavorable
+alberts.pdf;both;others;;benelux;subscription+service;2020;non;Very Unfavorable
+aloecell.pdf;hard;energy transition;;autres;one-time+subscription;NA;non;Very Unfavorable
+alouette.pdf;soft;industry 4.0;;france;subscription;2025;non;Very Unfavorable
+aloxy.pdf;both;industry 4.0;;benelux;one-time+service;NA;non;Favorable
+altosolution.pdf;hard;energy transition;;france;one-time+service;2024;non;Unfavorable
+altransenergy.pdf;hard;industry 4.0;;france;one-time+subscription+service;2024;oui;Very Unfavorable
+amethyste.pdf;soft;industry 4.0;;france;subscription;NA;non;Very Unfavorable
+amflow.pdf;soft;industry 4.0;;benelux;one-time+subscription;2023;non;Very Unfavorable
+amiraltechnologies.pdf;soft;industry 4.0;;france;licensing+service;2024;oui;Unfavorable
+anabrid.pdf;hard;new materials;;germany;licensing+one-time;2022;non;Very Unfavorable
+ananke.pdf;hard;energy transition;;france;one-time+service;2023;non;Unfavorable
+angara.pdf;soft;energy transition;;benelux;licensing+subscription;2024;oui;Very Unfavorable
+anisoprint.pdf;hard;new materials;;benelux;;;;Out
+appsilon.pdf;hard;others;;benelux;one-time+subscription;2026;non;Very Unfavorable
+aprexsolutions.pdf;soft;industry 4.0;;france;licensing+subscription;2026;non;Unfavorable
+aquilae.pdf;soft;industry 4.0;;france;one-time+subscription+service;2017;oui;Favorable
+aredox.pdf;hard;energy transition;;france;one-time+licensing+service;2020;non;Very Unfavorable
+arkcapturesolutions.pdf;hard;energy transition;;benelux;one-time+service;2027;oui;Unfavorable
+arkeocean.pdf;hard;others;;france;one-time+service;NA;non;Unfavorable
+askforthemoon.pdf;soft;industry 4.0;;france;subscription;2023;non;Very Unfavorable
+askforthemoon2.pdf;soft;industry 4.0;;france;subscription;2023;oui;Unfavorable
+astriis.pdf;soft;industry 4.0;;france;subscription;2027;oui;Unfavorable
+atmocoat.pdf;hard;new materials;;germany;one-time+service;2022;non;Unfavorable
+avoxt.pdf;hard;energy transition;;benelux;one-time+service;2023;non;Favorable
+awakemobility.pdf;soft;energy transition;;germany;one-time+subscription+service;NA;non;Out
+axfenergy.pdf;hard;energy transition;;germany;one-time+licensing+service;2028;oui;Very Unfavorable
+azteq.pdf;hard;energy transition;;benelux;one-time+service;2020;non;Unfavorable
+azteq2.pdf;hard;energy transition;;benelux;one-time+service;2020;non;Very Unfavorable
+batiprint3d.pdf;hard;industry 4.0;;france;one-time+service;2024;non;Out
+beagle.pdf;both;others;;autres;subscription+service;2022;oui;Out
+bianergy2.pdf;hard;others;;benelux;licensing+subscription;2024;oui;Very Unfavorable
+biocide.pdf;hard;industry 4.0;;autres;one-time+service;2020;oui;Very Unfavorable
+blixt.pdf;both;energy transition;;autres;one-time+licensing+service;NA;non;Out
+bloom.pdf;soft;energy transition;;autres;subscription;2027;oui;Very Unfavorable
+bluepowersynergy.pdf;hard;energy transition;;benelux;one-time+licensing;2020;non;Very Unfavorable
+bondzai.pdf;both;industry 4.0;;france;subscription+licensing;2023;oui;Unfavorable
+bonidriver.pdf;soft;others;;germany;one-time+subscription+service;2023;non;Out
+borealesenergy.pdf;hard;energy transition;;france;one-time;2023;non;Very Unfavorable
+brighterbins.pdf;both;energy transition;;benelux;one-time+subscription;2021;non;Unfavorable
+brolz.pdf;soft;industry 4.0;;benelux;;;;No Informations
+bulane.pdf;hard;energy transition;;france;one-time+subscription+service;2023;non;Very Unfavorable
+carbodown.pdf;hard;energy transition;;france;one-time+service;2024;non;Very Unfavorable
+carbon8.pdf;hard;energy transition;;autres;licensing+service;2025;non;Out
+carbyon2.pdf;hard;energy transition;;autres;one-time+service;2030;non;Very Favorable
+chemalive.pdf;soft;new materials;;autres;licensing+subscription+service;2021;oui;Very Unfavorable
+chemicalnewtech.pdf;hard;energy transition;;autres;one-time+service;2018;non;Out
+cilkoa.pdf;hard;new materials;;france;licensing+service;2025;non;Very Unfavorable
+cixten.pdf;hard;energy transition;;france;one-time+licensing+service;2025;non;Unfavorable
+clhynn.pdf;hard;energy transition;;france;licensing;2027;oui;Very Unfavorable
+cognifab.pdf;soft;industry 4.0;;france;subscription+service;2024;oui;Out
+coldpad.pdf;hard;others;;france;one-time+licensing+service;2022;non;Unfavorable
+coldpad2.pdf;hard;others;;france;one-time+licensing+service;2022;non;Unfavorable
+companionenergy.pdf;soft;energy transition;;benelux;one-time+subscription+service;2023;non;Very Unfavorable
+comppair.pdf;hard;new materials;;autres;one-time+licensing;2022;non;Out
+comsens.pdf;both;industry 4.0;;benelux;one-time+subscription;2024;non;Unfavorable
+condugo.pdf;soft;energy transition;;benelux;licensing+subscription+service;2017;non;Very Unfavorable
+cosmotech.pdf;soft;industry 4.0;;france;licensing+subscription+service;NA;non;Out
+covess.pdf;hard;industry 4.0;;benelux;one-time+licensing;2023;non;Unfavorable
+credoxys.pdf;hard;new materials;;germany;one-time+licensing;2022;non;Out
+ctrlenergy.pdf;both;energy transition;;france;one-time+subscription;2022;oui;Unfavorable
+cybus.pdf;soft;industry 4.0;;germany;subscription+licensing;2022;non;Unfavorable
+dacma.pdf;hard;energy transition;;germany;one-time+service;2024;non;Unfavorable
+deephawk.pdf;soft;industry 4.0;;france;one-time+subscription;2022;oui;Unfavorable
+deloq.pdf;both;industry 4.0;;benelux;one-time+service;2024;non;Unfavorable
+diamfab.pdf;hard;others;;france;one-time+service;2026;non;Out
+dimpora.pdf;soft;new materials;;autres;licensing+one-time+service;NA;oui;Out
+dionymer.pdf;hard;new materials;;france;one-time+service+subscription;2024;non;Very Unfavorable
+dotocean.pdf;both;others;;benelux;one-time+service;NA;non;Out
+dragonflypads2.pdf;both;others;;france;one-time+service;2018;non;Very Unfavorable
+dronematrix.pdf;both;industry 4.0;;benelux;one-time+licensing+service;2020;non;Unfavorable
+dropslab.pdf;soft;industry 4.0;;benelux;one-time+subscription+service;2024;oui;On Hold
+dryad.pdf;both;others;;germany;;;;Out
+ecellix.pdf;hard;energy transition;;autres;service;2025;non;Out
+echemicles.pdf;hard;energy transition;;autres;one-time+service;2026;oui;Out
+eco2grow.pdf;soft;energy transition;;germany;one-time+service;2024;non;Unfavorable
+ecobot.pdf;both;industry 4.0;;autres;one-time+service;2023;non;Unfavorable
+ecop.pdf;hard;energy transition;;autres;;;;No Informations
+edgetech.pdf;both;industry 4.0;;france;one-time+service;2021;non;Unfavorable
+edock.pdf;both;others;;benelux;one-time+service;2024;non;Out
+effectphotonics.pdf;hard;industry 4.0;;benelux;one-time+service;NA;non;Out
+effitrax.pdf;soft;industry 4.0;;benelux;licensing+one-time+service;2025;non;Very Unfavorable
+ehgroup.pdf;hard;energy transition;;autres;one-time+service;2022;non;Out
+electriq.pdf;hard;energy transition;;autres;one-time+service;2030;non;Out
+electrochaea.pdf;hard;energy transition;;germany;licensing+service;NA;non;Out
+elugie.pdf;hard;energy transition;;benelux;service;2024;non;Out
+enadyne.pdf;hard;energy transition;;germany;one-time+service;2025;non;Unfavorable
+enhywhere2.pdf;hard;energy transition;;france;one-time+service+subscription;2025;non;Very Unfavorable
+enosis.pdf;hard;energy transition;;france;one-time+service;2030;non;Very Favorable
+enow.pdf;soft;energy transition;;benelux;subscription+service;2019;non;Unfavorable
+enprove.pdf;soft;energy transition;;benelux;subscription+service;2023;non;Very Unfavorable
+entent.pdf;hard;energy transition;;france;one-time+licensing;2026;non;Very Unfavorable
+entras.pdf;soft;energy transition;;benelux;one-time+subscription+service;2023;non;Very Unfavorable
+esnah.pdf;soft;others;;benelux;subscription;NA;non;Very Unfavorable
+eternalpower.pdf;hard;energy transition;;germany;one-time+service;NA;oui;Very Unfavorable
+ethernics.pdf;both;energy transition;;benelux;one-time+subscription;2024;non;Very Unfavorable
+everysens.pdf;soft;energy transition;;france;subscription+service;2020;non;Unfavorable
+exanodia.pdf;soft;industry 4.0;;france;;;;No Informations
+exomatter.pdf;soft;industry 4.0;;germany;subscription;2024;oui;Unfavorable
+extracthive.pdf;hard;new materials;;france;licensing+service;2026;non;Very Unfavorable
+farwind.pdf;hard;energy transition;;france;one-time+service;2024;oui;Very Unfavorable
+fibersail2.pdf;hard;energy transition;;autres;one-time+service;NA;non;Very Unfavorable
+flasc.pdf;hard;energy transition;;benelux;one-time+service;2024;non;Unfavorable
+flasc2.pdf;hard;energy transition;;benelux;one-time+service;2024;non;Unfavorable
+flyability.pdf;both;industry 4.0;;autres;one-time+service;NA;non;Out
+flyability2.pdf;both;industry 4.0;;autres;one-time+service;2017;non;Out
+followinspiration.pdf;both;industry 4.0;;autres;one-time+subscription+service;2022;non;No Informations
+forecastyai.pdf;soft;industry 4.0;;germany;subscription+service;2022;non;Very Favorable
+fountainfuel.pdf;hard;energy transition;;benelux;one-time+service;2023;non;Unfavorable
+genesink.pdf;hard;new materials;;france;one-time+licensing+service;2024;non;Unfavorable
+genhy.pdf;hard;energy transition;;france;one-time+service;2024;oui;Unfavorable
+geolith.pdf;hard;others;;france;one-time+service;NA;non;Very Unfavorable
+ghyga.pdf;hard;energy transition;;france;one-time+licensing;NA;non;Very Unfavorable
+grandperspective.pdf;soft;industry 4.0;;germany;service;2024;non;Favorable
+gravithy.pdf;hard;energy transition;;france;one-time+service;2028;non;Very Unfavorable
+greengentech.pdf;hard;others;;france;one-time+service;2023;non;Out
+greenyenergyag.pdf;hard;energy transition;;autres;one-time+licensing+service;2025;non;Unfavorable
+grizit.pdf;hard;industry 4.0;;benelux;one-time+subscription+service;2025;oui;Unfavorable
+grownbio.pdf;hard;others;;benelux;one-time+service;2026;oui;Very Unfavorable
+h2sys.pdf;hard;energy transition;;france;one-time+subscription+service;2022;non;Unfavorable
+hace.pdf;hard;energy transition;;france;one-time+service;NA;oui;Very Unfavorable
+hawaitech.pdf;both;industry 4.0;;france;one-time+service;2026;non;Unfavorable
+hbat.pdf;hard;energy transition;;benelux;one-time+service;2026;non;Very Unfavorable
+heliac.pdf;hard;energy transition;;autres;one-time+service;2019;non;Unfavorable
+heliup2.pdf;hard;energy transition;;france;one-time+service;2025;oui;Unfavorable
+hevatech.pdf;hard;energy transition;;france;service;2017;non;Very Favorable
+hexana.pdf;hard;energy transition;;france;one-time+licensing;NA;non;Unfavorable
+hexana2.pdf;hard;energy transition;;france;one-time+licensing;2030;non;Very Unfavorable
+highline.pdf;hard;new materials;;germany;one-time+service;2025;non;Very Unfavorable
+hiqutediamond.pdf;hard;new materials;;france;one-time+service;2028;oui;Very Unfavorable
+hoeller.pdf;hard;energy transition;;germany;one-time+licensing+service;2024;oui;Favorable
+holosolis.pdf;hard;energy transition;;france;one-time;2027;non;Very Unfavorable
+holy.pdf;hard;new materials;;germany;one-time+subscription+service;2024;oui;Unfavorable
+huskk.pdf;hard;industry 4.0;;benelux;one-time+service;NA;oui;Unfavorable
+hysilabs.pdf;hard;energy transition;;france;one-time+licensing+service;2027;non;Very Favorable
+hyve.pdf;hard;energy transition;;benelux;subscription;2027;non;Very Favorable
+hywaves.pdf;hard;energy transition;;autres;licensing;2025;oui;Very Unfavorable
+icodos.pdf;hard;energy transition;;germany;licensing+service;2024;non;Very Favorable
+imsystems.pdf;hard;industry 4.0;;benelux;one-time+service;2027;non;Favorable
+independentlivingbase.pdf;hard;others;;france;service;2022;oui;Out
+ineratec.pdf;hard;energy transition;;germany;one-time+service;2026;non;Unfavorable
+infiniciag.pdf;hard;new materials;;germany;NA;2024;non;Unfavorable
+inflights.pdf;both;industry 4.0;SaaS;benelux;;2019;oui;Unfavorable
+infrasolid.pdf;hard;industry 4.0;;germany;;;;Unfavorable
+inphocal.pdf;hard;industry 4.0;;benelux;;;;Out
+insens.pdf;soft;industry 4.0;;benelux;;;;Favorable
+intelligentfluids.pdf;hard;others;;germany;;;;Out
+internest.pdf;both;others;;france;;;;Very Unfavorable
+inuse.pdf;soft;industry 4.0;;france;;;;Unfavorable
+ionics.pdf;hard;new materials;;benelux;;;;Out
+ipsumtek.pdf;both;industry 4.0;;france;;;;Very Unfavorable
+iqunet.pdf;both;industry 4.0;;benelux;;;;Unfavorable
+istya.pdf;both;industry 4.0;;france;;;;Unfavorable
+japet.pdf;hard;industry 4.0;;france;;;;Unfavorable
+keeyaerogel.pdf;hard;new materials;;france;;;;Unfavorable
+keeyaerogel2.pdf;hard;new materials;;france;;;;Very Unfavorable
+keiron.pdf;hard;industry 4.0;;benelux;;;;No Informations
+kemiwatt.pdf;hard;energy transition;;france;;;;Unfavorable
+kheoos.pdf;soft;industry 4.0;;france;;;;Very Favorable
+komugi.pdf;soft;industry 4.0;;france;;;;Unfavorable
+kooping.pdf;soft;industry 4.0;;france;;;;Unfavorable
+lancey.pdf;both;energy transition;;france;;;;Unfavorable
+laserco.pdf;hard;new materials;;benelux;;;;Unfavorable
+latannerievegetale.pdf;hard;others;;france;;;;Out
+leviathandynamics2.pdf;hard;energy transition;;france;;;;Unfavorable
+lichens.pdf;hard;new materials;;france;;;;Out
+lionvolt.pdf;hard;others;;benelux;;;;Very Unfavorable
+lithcote.pdf;hard;energy transition;;benelux;;;;No Informations
+litherm.pdf;hard;energy transition;;germany;;;;Unfavorable
+maana.pdf;hard;energy transition;;benelux;;;;Unfavorable
+machine2humansolutions.pdf;soft;industry 4.0;;germany;;;;Unfavorable
+magreesource.pdf;hard;new materials;;france;;;;Unfavorable
+manaa.pdf;hard;energy transition;;benelux;;;;Unfavorable
+mantispectra.pdf;hard;industry 4.0;;benelux;;;;Unfavorable
+mariepoppies.pdf;hard;others;;benelux;;;;Very Unfavorable
+matvision.pdf;both;industry 4.0;;benelux;;;;Favorable
+mcve.pdf;hard;industry 4.0;;france;;;;Unfavorable
+mcve3.pdf;hard;industry 4.0;;france;;;;Unfavorable
+mcve4.pdf;hard;industry 4.0;;france;;;;Very Unfavorable
+meam.pdf;both;others;;benelux;;;;Out
+mecabotix.pdf;hard;industry 4.0;;france;;;;Very Unfavorable
+mecawareA.pdf;hard;energy transition;;france;;;;Very Unfavorable
+metaliq.pdf;hard;energy transition;;germany;;;;No Informations
+mirsense.pdf;hard;industry 4.0;;france;;;;Very Unfavorable
+mitis.pdf;hard;energy transition;;benelux;;;;Unfavorable
+mobenergy.pdf;hard;energy transition;;france;;;;Unfavorable
+mobilitywork.pdf;soft;industry 4.0;;france;;;;Very Favorable
+mobito.pdf;soft;industry 4.0;;benelux;;;;Out
+moiz.pdf;hard;energy transition;;france;;;;Unfavorable
+molecularplasmagroup.pdf;hard;new materials;;benelux;;;;Favorable
+muodim.pdf;both;energy transition;;france;;;;Unfavorable
+myjiminy.pdf;soft;others;;france;;;;Out
+nanoz.pdf;hard;industry 4.0;;france;;;;Unfavorable
+nature2need.pdf;both;new materials;;germany;;;;Out
+neextengineering.pdf;hard;energy transition;;france;;;;Unfavorable
+nestwave.pdf;hard;industry 4.0;;france;;;;Unfavorable
+neurala.pdf;soft;industry 4.0;;autres;;;;Very Unfavorable
+nextind.pdf;both;industry 4.0;;autres;;;;Very Unfavorable
+nexwafe.pdf;hard;energy transition;;germany;;;;Very Unfavorable
+nexxoil.pdf;hard;others;;germany;;;;Very Unfavorable
+nexxtlab.pdf;both;energy transition;;benelux;;;;Very Unfavorable
+nimbleone.pdf;hard;industry 4.0;;france;;;;Very Unfavorable
+nimesis.pdf;hard;new materials;;france;;;;Out
+novacarbon.pdf;hard;new materials;;france;;;;Unfavorable
+novali3.pdf;hard;energy transition;;benelux;;;;Very Unfavorable
+novocycle.pdf;hard;energy transition;;autres;;;;Favorable
+novomof.pdf;hard;new materials;;autres;;;;Unfavorable
+obeia.pdf;soft;industry 4.0;;france;;;;Unfavorable
+octofan.pdf;hard;others;;france;;;;Out
+oghji.pdf;both;energy transition;;autres;;;;Very Unfavorable
+ollow.pdf;hard;others;;france;;;;Unfavorable
+onewatt.pdf;soft;industry 4.0;;benelux;;;;Unfavorable
+oppr.pdf;soft;industry 4.0;;benelux;;;;Unfavorable
+otiv.pdf;both;industry 4.0;;benelux;;;;Unfavorable
+otiv2.pdf;both;industry 4.0;;benelux;;;;Unfavorable
+ouat!.pdf;soft;industry 4.0;;benelux;;;;Unfavorable
+oxylum.pdf;hard;energy transition;;benelux;;;;Unfavorable
+packwise.pdf;both;industry 4.0;;germany;;;;Unfavorable
+pathrobotics.pdf;soft;industry 4.0;;autres;;;;Out
+pepps.pdf;soft;industry 4.0;;benelux;;;;Favorable
+phoenixai.pdf;soft;industry 4.0;;benelux;;;;Unfavorable
+phytonics.pdf;hard;energy transition;;germany;;;;Very Unfavorable
+polypea.pdf;hard;new materials;;benelux;;;;Out
+powerlubecontrol.pdf;both;industry 4.0;;benelux;;;;Unfavorable
+pozyx.pdf;both;industry 4.0;;benelux;;;;No Informations
+propellane.pdf;hard;energy transition;;france;;;;Very Unfavorable
+purenat2.pdf;hard;new materials;;france;;;;Unfavorable
+pydro.pdf;soft;energy transition;;germany;;;;Unfavorable
+qualitics.pdf;soft;energy transition;;benelux;;;;Very Favorable
+reeverse.pdf;soft;industry 4.0;;france;;2023;non;Unfavorable
+rein4ced.pdf;hard;new materials;;benelux;;;;Out
+rejuice.pdf;hard;energy transition;;benelux;;;;Favorable
+renewind.pdf;hard;energy transition;;benelux;;;;Unfavorable
+replace.pdf;hard;others;;france;;;;Unfavorable
+ridergy.pdf;soft;industry 4.0;;germany;;;;Out
+rift.pdf;hard;energy transition;;benelux;;;;Unfavorable
+roav7.pdf;both;industry 4.0;;france;;;;Out
+rosi.pdf;hard;energy transition;;france;;;;Favorable
+roth2.pdf;hard;energy transition;;france;;;;Very Unfavorable
+rovenso.pdf;hard;industry 4.0;;autres;;;;Out
+sakowin.pdf;hard;energy transition;;france;;;;Unfavorable
+saturnetechnology.pdf;hard;industry 4.0;;benelux;;;;Unfavorable
+senergetics.pdf;soft;industry 4.0;;benelux;;;;Unfavorable
+senodis.pdf;both;industry 4.0;;germany;;;;Unfavorable
+senorics.pdf;hard;industry 4.0;;germany;;;;Very Unfavorable
+senseven.pdf;soft;industry 4.0;;autres;;;;Out
+sereema.pdf;soft;energy transition;;france;;;;Favorable
+sesamm.pdf;soft;others;;france;;;;Very Unfavorable
+shayp.pdf;soft;others;;benelux;;;;Favorable
+sironatechnologies.pdf;hard;energy transition;;benelux;;;;Unfavorable
+skydrone.pdf;hard;others;;france;;;;Unfavorable
+sogilis.pdf;soft;industry 4.0;;france;;;;Unfavorable
+soluterials.pdf;hard;new materials;;germany;;;;Unfavorable
+soomiq.pdf;hard;energy transition;;germany;;;;Very Unfavorable
+spark2.pdf;hard;energy transition;;france;;;;Unfavorable
+spotlight.pdf;both;industry 4.0;;france;;;;Favorable
+spreeinteractive.pdf;soft;others;;germany;;;;Out
+squairtech.pdf;hard;new materials;;france;;;;Favorable
+staaq.pdf;hard;energy transition;;france;;;;Very Unfavorable
+stabilogreen.pdf;hard;new materials;;benelux;;NA;non;Out
+starcopter.pdf;hard;energy transition;;germany;;;;Unfavorable
+stargate.pdf;hard;energy transition;;autres;;;;Very Unfavorable
+storh.pdf;hard;energy transition;;autres;;;;Unfavorable
+sublimeenergie.pdf;hard;energy transition;;france;;;;Unfavorable
+sunlion.pdf;hard;energy transition;;benelux;;;;Very Unfavorable
+sunmaxx.pdf;hard;energy transition;;germany;;;;Unfavorable
+sunmaxx2.pdf;hard;energy transition;;germany;;;;Very Unfavorable
+supairvision.pdf;both;energy transition;;france;;;;Favorable
+swanh.pdf;hard;energy transition;;france;;;;Unfavorable
+swoopenergy.pdf;hard;energy transition;;france;;;;Very Unfavorable
+sylfen.pdf;hard;energy transition;;france;;;;Unfavorable
+teeptrak2.pdf;both;industry 4.0;;france;;;;Unfavorable
+terakalis.pdf;both;industry 4.0;;france;;;;Unfavorable
+teratonics.pdf;hard;industry 4.0;;france;;;;Unfavorable
+theyeq.pdf;both;industry 4.0;;france;;;;Unfavorable
+threedy.pdf;soft;industry 4.0;;germany;;;;Very Unfavorable
+tiamat.pdf;hard;energy transition;;france;;;;Very Unfavorable
+tihive.pdf;both;industry 4.0;;france;;;;Unfavorable
+torwash.pdf;hard;energy transition;;benelux;;;;Unfavorable
+tozero.pdf;hard;energy transition;;germany;;;;Very Unfavorable
+tractonomy.pdf;both;industry 4.0;;benelux;;;;Unfavorable
+turbit.pdf;soft;industry 4.0;;germany;;;;Unfavorable
+turbulent.pdf;hard;energy transition;;benelux;;;;Unfavorable
+twikit.pdf;soft;industry 4.0;;benelux;;;;Out
+twinsity.pdf;soft;industry 4.0;;germany;;;;Unfavorable
+uavia.pdf;both;industry 4.0;;france;;;;Unfavorable
+uware.pdf;both;industry 4.0;;benelux;;;;Very Unfavorable
+uware2.pdf;both;industry 4.0;;benelux;;;;Unfavorable
+uze.pdf;hard;energy transition;;benelux;;;;Unfavorable
+v2i.pdf;both;industry 4.0;;benelux;;;;Very Unfavorable
+variolytics.pdf;both;industry 4.0;;germany;;;;Very Unfavorable
+vddtech.pdf;hard;industry 4.0;;benelux;;;;Out
+vernaio.pdf;soft;industry 4.0;;germany;;;;Very Unfavorable
+viridianlithium.pdf;hard;energy transition;;france;;;;Unfavorable
+visiontechnology.pdf;hard;energy transition;;france;;;;Very Unfavorable
+visplore.pdf;soft;industry 4.0;;autres;;;;Unfavorable
+vocsens.pdf;hard;industry 4.0;;benelux;;;;Favorable
+voleatech.pdf;soft;industry 4.0;;germany;;;;Unfavorable
+vulkam.pdf;hard;new materials;;france;;;;Out
+wainvame.pdf;hard;industry 4.0;;france;;;;Very Favorable
+waterhorizon.pdf;hard;energy transition;;france;;;;Unfavorable
+waterstuffsun.pdf;hard;energy transition;;germany;;;;Very Unfavorable
+watt4ever.pdf;hard;energy transition;;benelux;;;;Unfavorable
+wattalps.pdf;hard;energy transition;;france;;;;Unfavorable
+wayout.pdf;hard;others;;autres;;;;Out
+wespran.pdf;hard;energy transition;;france;;;;Unfavorable
+wiidetect.pdf;soft;industry 4.0;;france;;;;Very Unfavorable
+windfisher.pdf;hard;energy transition;;france;;;;Unfavorable
+wizata.pdf;soft;industry 4.0;;benelux;;;;Out
+worms2.pdf;hard;new materials;;france;;;;Unfavorable
+xeryon.pdf;hard;industry 4.0;;benelux;;;;Unfavorable
+yazzoom.pdf;soft;industry 4.0;;benelux;;;;No Informations
+ysenergiesmarines.pdf;hard;energy transition;;france;;;;Very Unfavorable
+zensor.pdf;soft;industry 4.0;;benelux;;;;Very Unfavorable
+zeppsolutions.pdf;hard;energy transition;;benelux;;;;Unfavorable
+zorabots.pdf;soft;industry 4.0;;benelux;;;;Unfavorable

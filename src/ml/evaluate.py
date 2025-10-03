@@ -84,6 +84,4 @@ def evaluate(label_col):
 
 if __name__ == "__main__":
     # Exemple d’utilisation
-    evaluate("tech")
-    evaluate("domain")
-    evaluate("country")
+    evaluate("resultat")
