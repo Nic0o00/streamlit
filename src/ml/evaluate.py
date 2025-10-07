@@ -1,9 +1,3 @@
-"""
-Évaluation simple des prédictions pour un label (ex: tech, domain, country).
-Compare predicted_xxx avec le label réel et calcule les bons, faux et le pourcentage.
-Affiche également la liste des documents mal prédits avec leur prédiction et label réel.
-"""
-
 import os
 import pandas as pd
 from sklearn.metrics import confusion_matrix
@@ -42,6 +36,10 @@ def evaluate(label_col):
     if len(df_eval) == 0:
         raise ValueError(f"Aucune correspondance entre prédictions et labels pour {label_col}.")
 
+    # --- Exclure les valeurs vides / NaN ---
+    df_eval = df_eval.dropna(subset=[predict_col, label_col])
+    df_eval = df_eval[(df_eval[predict_col] != "") & (df_eval[label_col] != "")]
+
     # --- Comparaison ---
     df_eval["correct"] = df_eval[predict_col] == df_eval[label_col]
 
@@ -72,6 +70,8 @@ def evaluate(label_col):
         print("\nAucun document mal prédit.")
 
     # --- Matrice de confusion ---
+    df_eval[predict_col] = df_eval[predict_col].astype(str)
+    df_eval[label_col] = df_eval[label_col].astype(str)
     labels_sorted = sorted(df_eval[label_col].unique())
     cm = confusion_matrix(df_eval[label_col], df_eval[predict_col], labels=labels_sorted)
     cm_df = pd.DataFrame(cm, index=labels_sorted, columns=labels_sorted)
@@ -81,7 +81,5 @@ def evaluate(label_col):
     # Retourne les résultats pour analyse externe
     return df_eval, df_wrong, cm_df
 
-
 if __name__ == "__main__":
-    # Exemple d’utilisation
     evaluate("resultat")

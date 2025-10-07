@@ -4,7 +4,7 @@ import pandas as pd
 
 # chemins
 BASE = os.path.dirname(__file__)
-MODEL_PATH = os.path.join(BASE, "..", "..", "..", "models", "deck_classifier.joblib")
+MODEL_PATH = os.path.join(BASE, "..", "..", "..", "models", "deck_classifier_rf.joblib")
 VECT_CSV = os.path.join(BASE, "..", "..", "..", "data", "processed", "tfidf_vectors.csv")
 LABELED_CSV = os.path.join(BASE, "..", "..", "..", "data", "labeled.csv")
 OUTPUT_CSV = os.path.join(BASE, "..", "..", "..", "output", "predictions", "tfidf_vectors_with_resultat_predictions.csv")
