@@ -19,6 +19,7 @@ Paramètres TF-IDF utilisés :
 """
 
 import os
+import streamlit as st
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -84,7 +85,7 @@ def vectorize_text():
 
     # --- Sauvegarde du CSV TF-IDF ---
     tfidf_df.to_csv(output_file, sep=";", index=False)
-    print(f"Vecteurs TF-IDF enrichis sauvegardés dans : {output_file}")
+    st.success(f"Vecteurs TF-IDF enrichis sauvegardés")
 
 
 # --- Point d'entrée principal ---
