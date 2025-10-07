@@ -1,11 +1,10 @@
 deep_translator==1.11.4
+fitz==0.0.1.dev2
 joblib==1.5.1
 langdetect==1.0.9
-nltk==3.9.1
 numpy==2.3.3
-pandas==2.3.2
+pandas==2.3.3
 scikit_learn==1.7.2
 scipy==1.16.2
-sentence_transformers==5.1.0
-transformers==4.56.1
+streamlit==1.47.1
 PyMuPDF==1.22.5
