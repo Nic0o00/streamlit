@@ -1,13 +1,64 @@
+"""
+Module : evaluate_predictions
+=============================
+
+Ce module permet d’évaluer les prédictions d’un label donné par rapport aux labels
+réels dans le fichier `labeled_total.csv`.
+
+Fonction principale :
+--------------------
+- `evaluate(label_col)` : compare les prédictions et les labels, calcule l’accuracy,
+  affiche la répartition des classes, les documents mal prédits et la matrice de confusion.
+
+Exemple d’utilisation :
+-----------------------
+>>> evaluate("tech")
+>>> evaluate("domain")
+>>> evaluate("country")
+
+Sorties :
+---------
+- Affichage console des métriques et des erreurs
+- Retourne un tuple (df_eval, df_wrong, cm_df) :
+    - `df_eval` : DataFrame fusionné avec colonne "correct"
+    - `df_wrong` : DataFrame des documents mal prédits
+    - `cm_df` : matrice de confusion au format DataFrame
+"""
+
 import os
 import pandas as pd
 from sklearn.metrics import confusion_matrix
 
+
 def evaluate(label_col):
     """
-    Compare les prédictions label_col avec les labels du fichier labeled_total.csv.
-    Exemple : evaluate("tech"), evaluate("domain"), evaluate("country")
+    Évalue les prédictions pour un label donné en comparant avec les labels réels.
+
+    Paramètres
+    ----------
+    label_col : str
+        Nom du label à évaluer (ex: "tech", "domain", "country", "resultat").
+
+    Étapes
+    -------
+    1. Chargement du fichier de prédictions et du fichier `labeled_total.csv`
+    2. Harmonisation des colonnes "doc" pour jointure
+    3. Fusion des prédictions et des labels réels sur "doc"
+    4. Exclusion des valeurs vides ou NaN
+    5. Calcul de l’accuracy et du nombre de prédictions correctes/incorrectes
+    6. Affichage de la répartition des classes réelles et prédites
+    7. Affichage des documents mal prédits
+    8. Calcul et affichage de la matrice de confusion
+
+    Retour
+    ------
+    tuple
+        - df_eval : DataFrame fusionné avec colonne "correct"
+        - df_wrong : DataFrame des documents mal prédits
+        - cm_df : matrice de confusion (DataFrame)
     """
-    # --- Chemins ---
+
+    # --- Définition des chemins de fichiers ---
     pred_file = f"tfidf_vectors_with_{label_col}_predictions.csv"
     predict_col = f"predicted_{label_col}"
     base_dir = os.path.dirname(__file__)
@@ -18,15 +69,15 @@ def evaluate(label_col):
     print(f"Fichier prédictions : {path_pred}")
     print(f"Fichier labels      : {path_label}")
 
-    # --- Lecture ---
+    # --- Lecture des fichiers CSV ---
     df_pred = pd.read_csv(path_pred, sep=";")
     df_label = pd.read_csv(path_label, sep=";")
 
-    # --- Harmonisation ---
+    # --- Harmonisation des colonnes "doc" ---
     df_pred["doc"] = df_pred["doc"].astype(str)
     df_label["doc"] = df_label["doc"].astype(str)
 
-    # --- Jointure sur "doc" ---
+    # --- Jointure prédictions / labels réels ---
     df_eval = pd.merge(
         df_pred[["doc", predict_col]],
         df_label[["doc", label_col]],
@@ -36,11 +87,11 @@ def evaluate(label_col):
     if len(df_eval) == 0:
         raise ValueError(f"Aucune correspondance entre prédictions et labels pour {label_col}.")
 
-    # --- Exclure les valeurs vides / NaN ---
+    # --- Suppression des valeurs vides ---
     df_eval = df_eval.dropna(subset=[predict_col, label_col])
     df_eval = df_eval[(df_eval[predict_col] != "") & (df_eval[label_col] != "")]
 
-    # --- Comparaison ---
+    # --- Calcul colonne "correct" ---
     df_eval["correct"] = df_eval[predict_col] == df_eval[label_col]
 
     total = len(df_eval)
@@ -78,8 +129,10 @@ def evaluate(label_col):
     print("\n--- Matrice de confusion ---")
     print(cm_df)
 
-    # Retourne les résultats pour analyse externe
+    # --- Retourne les résultats pour analyse externe ---
     return df_eval, df_wrong, cm_df
 
+
+# --- Point d’entrée principal ---
 if __name__ == "__main__":
     evaluate("resultat")

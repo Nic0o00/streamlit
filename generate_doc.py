@@ -6,7 +6,6 @@ et la placer dans le dossier `doc/`.
 import os
 import subprocess
 
-
 # Répertoire racine du projet (dossier où se trouve ce script)
 root_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -14,40 +13,57 @@ root_dir = os.path.dirname(os.path.abspath(__file__))
 docs_dir = os.path.join(root_dir, "doc", "html")
 os.makedirs(docs_dir, exist_ok=True)
 
-# Liste des modules à documenter (notation Python)
+# Liste complète des modules à documenter
 modules = [
-    "src.ml.country.train_country",
+    #ML
+    "src.ml.country.model_country",
     "src.ml.country.predict_country",
-    "src.ml.domain.train_domain",
+
+    "src.ml.domain.model_domain",
     "src.ml.domain.predict_domain",
-    "src.ml.tech.train_tech",
+
+    "src.ml.deck.model_resultat",
+    "src.ml.deck.predict_resultat",
+
+    "src.ml.tech.model_tech",
     "src.ml.tech.predict_tech",
+
+    # Evaluation
+    "src.ml.evaluate",
+
+    # Vectorisation
+    "src.vectorisation.vectorize_text",
+
+    # Text treatment
     "src.treatment.detect_lang",
     "src.treatment.extract_text",
     "src.treatment.translate",
-    "src.vectorisation.vectorize_text"
 ]
 
-
+# Génération des docs HTML
 for mod in modules:
-    #print(f"Génération de la doc pour {mod} ")
-    # Exécution de pydoc pour générer le HTML directement dans doc/
-    subprocess.run(
-        ["python", "-m", "pydoc", "-w", mod],
-          # le HTML sera créé dans ce dossier
-    )
+    print(f"📄 Génération doc pour {mod} …")
+    result = subprocess.run(["python", "-m", "pydoc", "-w", mod], capture_output=True, text=True)
+    
+    if result.returncode != 0:
+        print(f"❌ Échec génération pour {mod} : {result.stderr}")
+        continue
+
+    # Le fichier généré est mod_name.html dans le cwd
     html_file = f"{mod}.html"
+    src_path = os.path.join(root_dir, html_file)
 
-for file in os.listdir(root_dir):
-    if file.endswith(".html"):
-        src_path = os.path.join(root_dir, file)
-        dest_path = os.path.join(docs_dir, file)
-        if os.path.exists(dest_path):
-            os.remove(dest_path)  # Supprime l'ancien fichier
-        os.rename(src_path, dest_path)
-        print(f"{file} déplacé vers {docs_dir}")
+    if not os.path.exists(src_path):
+        print(f"Fichier HTML non trouvé pour {mod}, peut-être module non importable.")
+        continue
 
+    dest_path = os.path.join(docs_dir, html_file)
+    if os.path.exists(dest_path):
+        os.remove(dest_path)
+    os.rename(src_path, dest_path)
+    print(f"{html_file} déplacé vers {docs_dir}")
 
+# Création d'un index HTML
 index_file = os.path.join(root_dir, "doc", "index.html")
 with open(index_file, "w", encoding="utf-8") as f:
     f.write("<!DOCTYPE html>\n<html lang='fr'>\n<head>\n")
@@ -55,8 +71,7 @@ with open(index_file, "w", encoding="utf-8") as f:
     f.write("<h1>Documentation du projet</h1>\n<ul>\n")
     for file in sorted(os.listdir(docs_dir)):
         if file.endswith(".html"):
-            # lien relatif vers le sous-dossier html/
             f.write(f"<li><a href='html/{file}'>{file}</a></li>\n")
     f.write("</ul>\n</body>\n</html>\n")
-  
+
 print("Toutes les documentations ont été générées dans le dossier doc/")

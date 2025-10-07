@@ -6,9 +6,10 @@ from treatment.translate import translate_text
 from vectorisation.vectorize_text import vectorize_text
 
 #from ml.model_domain import predict_domain
-from ml.techno.predict_techno import predict_tech
+from ml.techno.predict_tech import predict_tech
 from ml.domain.predict_domain import predict_domain
 from ml.country.predict_country import predict_country
+from ml.resultat.predict_resultat import predict_resultat
 
 from ml.evaluate import evaluate
 
@@ -43,7 +44,7 @@ for each_file in os.listdir(DECK_DIRECTORY):
     docs.append(each_file)      # Nom du fichier
     texts.append(text)          # Texte (traduit si nécessaire)
 
-"""
+
 # --- Vectorisation TF-IDF globale ---
 vectorize_text()
 
@@ -54,9 +55,10 @@ predict_domain()
 
 predict_country()
 
-revenue_pred()
+predict_resultat()
 
 evaluate("tech")
 evaluate("domain")
 evaluate("country")
-"""
+evaluate("resultat")
+

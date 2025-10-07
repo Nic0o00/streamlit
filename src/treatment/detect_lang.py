@@ -1,34 +1,36 @@
 """
-Module de détection automatique de la langue d'un texte.
+Module : detect_language
+=======================
 
-Ce module utilise la librairie `langdetect` pour identifier la langue d'un texte donné.
-Il gère les textes vides ou non détectables et capture les exceptions liées à
-la détection de langue.
+Ce module fournit une fonction pour détecter automatiquement la langue
+d'un texte à l'aide de la librairie `langdetect`.
 
-Fonctions
----------
-detect_language(text)
-    Détecte la langue d'un texte.
+Fonctions principales :
+-----------------------
+- `detect_language(text)` : détecte le code langue (ex: 'en', 'fr', 'de')
+  d'un texte donné, ou retourne `None` si la langue ne peut pas être détectée.
 """
+
 from langdetect import detect
 from langdetect.lang_detect_exception import LangDetectException
 
+# Variable globale optionnelle pour stocker le dernier résultat
 result = None
 
 def detect_language(text):
     """
     Détecte la langue d'un texte donné.
 
-    Parameters
+    Paramètres
     ----------
     text : str
         Le texte dont on souhaite détecter la langue.
 
-    Returns
-    -------
+    Retour
+    ------
     str or None
-        Code de la langue détectée (ex: 'en', 'fr', 'de'), ou `None` si la langue
-        ne peut pas être détectée ou si le texte est vide.
+        - Code de la langue détectée (ex: 'en', 'fr', 'de')
+        - `None` si la langue ne peut pas être détectée ou si le texte est vide.
 
     Notes
     -----
@@ -36,12 +38,18 @@ def detect_language(text):
     - Les exceptions levées par la librairie `langdetect` sont interceptées et
       retournent également `None`.
     """
+    global result
+
+    # --- Vérification des textes vides ---
     if not text or len(text.strip()) == 0:
-        result = None  # Ou "unknown", ou une autre valeur signifiant absence de langue détectable
+        result = None  # Texte vide ou uniquement espaces
+
     try:
+        # --- Détection de la langue ---
         lang = detect(text)
         result = lang
     except LangDetectException:
+        # --- Gestion des erreurs de détection ---
         result = None
 
     return result

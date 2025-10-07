@@ -6,7 +6,7 @@ from src.treatment.extract_text import extract_text_from_pdf
 from src.treatment.detect_lang import detect_language
 from src.treatment.translate import translate_text
 from src.vectorisation.vectorize_text import vectorize_text
-from src.ml.techno.predict_techno import predict_tech
+from ml.techno.predict_tech import predict_tech
 from src.ml.domain.predict_domain import predict_domain
 from src.ml.country.predict_country import predict_country
 

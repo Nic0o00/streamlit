@@ -1,74 +1,92 @@
 """
-Module de génération TF-IDF enrichi pour la technologie des documents.
+Module : vectorize_text
+=======================
 
-Lit tous les fichiers texte de `data/translated/`, construit des vecteurs
-TF-IDF (1-grammes, 2-grammes, 3-grammes) et sauvegarde dans
-`data/processed/tfidfvectorizer_tech.csv`.
+Ce module permet de générer des vecteurs TF-IDF enrichis pour les documents
+texte présents dans le dossier `data/processed/translated/`.
+
+Fonctions principales :
+-----------------------
+- `vectorize_text()` : lit tous les fichiers texte, construit les vecteurs TF-IDF
+  (1-grammes, 2-grammes, 3-grammes) et sauvegarde le DataFrame résultant dans
+  `data/processed/tfidf_vectors.csv`.
+
+Paramètres TF-IDF utilisés :
+----------------------------
+- ngram_range=(1,3) : prend en compte unigrams, bigrams et trigrams
+- max_features=7000  : limite le nombre de termes pour éviter l’explosion mémoire
+- min_df=2           : ignore les termes trop rares
 """
+
 import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+
 def vectorize_text():
-    # --- Chemins ---
+    """
+    Lit tous les fichiers texte du dossier `translated`, calcule les vecteurs
+    TF-IDF enrichis et sauvegarde le résultat dans un CSV.
+
+    Étapes :
+    --------
+    1. Lecture de tous les fichiers .txt dans `data/processed/translated/`
+    2. Stockage dans un DataFrame avec colonnes : "doc" et "text"
+    3. Construction d'un vecteur TF-IDF avec ngram_range=(1,3)
+    4. Conversion en DataFrame avec les termes comme colonnes
+    5. Ajout de la colonne "doc" en première position
+    6. Sauvegarde du DataFrame TF-IDF dans `data/processed/tfidf_vectors.csv`
+
+    Raises
+    ------
+    ValueError
+        Si aucun fichier .txt n'est trouvé dans le dossier source.
+    """
+
+    # --- Définition des chemins ---
     base_dir = os.path.dirname(__file__)
-    input_dir  = os.path.join(base_dir, "..", "..", "data", "processed", "translated")
+    input_dir = os.path.join(base_dir, "..", "..", "data", "processed", "translated")
     output_file = os.path.join(base_dir, "..", "..", "data", "processed", "tfidf_vectors.csv")
 
-    # --- Lire tous les fichiers texte ---
+    # --- Lecture des fichiers texte ---
     docs = []
     for fname in os.listdir(input_dir):
         if fname.endswith(".txt"):
             path = os.path.join(input_dir, fname)
             with open(path, "r", encoding="utf-8", errors="ignore") as f:
                 text = f.read()
+            # On conserve le nom du doc en ajoutant .pdf pour cohérence
             docs.append({"doc": os.path.splitext(fname)[0] + ".pdf", "text": text})
-
 
     if not docs:
         raise ValueError("Aucun fichier .txt trouvé dans le dossier translated.")
 
     df = pd.DataFrame(docs)
-    df["doc"] = df["doc"].astype(str)  # assure que doc est bien str
+    df["doc"] = df["doc"].astype(str)
     print(f"{len(df)} documents chargés depuis {input_dir}")
 
-    # --- TF-IDF enrichi ---
+    # --- Création du vecteur TF-IDF enrichi ---
     vectorizer = TfidfVectorizer(
-        ngram_range=(1,3),     # unigrammes + bigrammes + trigrammes
-        max_features=7000,    # limite pour éviter explosion mémoire
-        min_df=2,              # ignorer termes trop rares
-        #max_df=0.8             # ignorer termes trop fréquents
+        ngram_range=(1,3),   # unigrammes, bigrammes et trigrammes
+        max_features=7000,   # limite pour éviter l'explosion mémoire
+        min_df=2             # ignorer termes trop rares
     )
     X = vectorizer.fit_transform(df["text"].astype(str))
 
-    # --- Conversion DataFrame ---
+    # --- Conversion en DataFrame ---
     tfidf_df = pd.DataFrame(
         X.toarray(),
         columns=vectorizer.get_feature_names_out()
     )
 
-   # Assure que 'doc' est bien str
-    df["doc"] = df["doc"].astype(str)
-
-    # Crée le TF-IDF
-    X = vectorizer.fit_transform(df["text"].astype(str))
-    tfidf_df = pd.DataFrame(
-        X.toarray(),
-        columns=vectorizer.get_feature_names_out()
-    )
-
-    # Si doc existe déjà, on le supprime pour éviter doublon
-    if "doc" in tfidf_df.columns:
-        tfidf_df = tfidf_df.drop(columns=["doc"])
-
-    # Ajouter doc en première colonne
+    # --- Ajouter la colonne "doc" en première position ---
     tfidf_df.insert(0, "doc", df["doc"])
 
-
-    # --- Sauvegarde ---
+    # --- Sauvegarde du CSV TF-IDF ---
     tfidf_df.to_csv(output_file, sep=";", index=False)
     print(f"Vecteurs TF-IDF enrichis sauvegardés dans : {output_file}")
 
 
+# --- Point d'entrée principal ---
 if __name__ == "__main__":
     vectorize_text()
