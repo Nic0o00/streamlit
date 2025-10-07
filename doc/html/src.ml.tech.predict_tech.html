@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.tech.predict_tech</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.tech.html" class="white">tech</a>.predict_tech</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Ctech%5Cpredict_tech.py">c:\users\nicol\desktop\project_scoringapp\src\ml\tech\predict_tech.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;:&nbsp;predict_tech<br>
+=====================<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;réalise&nbsp;la&nbsp;**prédiction&nbsp;multi-label**&nbsp;des&nbsp;technologies&nbsp;d’un&nbsp;document<br>
+(`hard`,&nbsp;`soft`,&nbsp;ou&nbsp;`both`)&nbsp;à&nbsp;partir&nbsp;de&nbsp;vecteurs&nbsp;TF-IDF&nbsp;et&nbsp;d’un&nbsp;modèle<br>
+de&nbsp;**régression&nbsp;logistique&nbsp;One-vs-Rest**&nbsp;préalablement&nbsp;entraîné.<br>
+&nbsp;<br>
+Fonctionnalités&nbsp;principales&nbsp;:<br>
+-----------------------------<br>
+-&nbsp;Chargement&nbsp;du&nbsp;modèle&nbsp;de&nbsp;classification&nbsp;multi-label&nbsp;(`lr_multilabel_techno_model.joblib`)<br>
+-&nbsp;Chargement&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF&nbsp;depuis&nbsp;`data/processed/tfidf_vectors.csv`<br>
+-&nbsp;Calcul&nbsp;des&nbsp;probabilités&nbsp;pour&nbsp;chaque&nbsp;label&nbsp;(`hard`,&nbsp;`soft`)<br>
+-&nbsp;Application&nbsp;d’un&nbsp;seuil&nbsp;de&nbsp;confiance&nbsp;(`0.5`&nbsp;par&nbsp;défaut)<br>
+-&nbsp;Fusion&nbsp;des&nbsp;résultats&nbsp;pour&nbsp;produire&nbsp;un&nbsp;label&nbsp;combiné&nbsp;:&nbsp;&nbsp;<br>
+&nbsp;&nbsp;`"hard"`,&nbsp;`"soft"`,&nbsp;`"both"`,&nbsp;ou&nbsp;`"unknown"`<br>
+-&nbsp;Export&nbsp;des&nbsp;résultats&nbsp;dans&nbsp;un&nbsp;CSV&nbsp;contenant&nbsp;:&nbsp;&nbsp;<br>
+&nbsp;&nbsp;`doc`,&nbsp;`predicted_tech`,&nbsp;et&nbsp;`confidence_score`<br>
+&nbsp;<br>
+Fichier&nbsp;de&nbsp;sortie&nbsp;:<br>
+-------------------<br>
+-&nbsp;`output/predictions/tfidf_vectors_with_tech_predictions.csv`<br>
+&nbsp;<br>
+Auteur&nbsp;:<br>
+--------<br>
+Fait&nbsp;partie&nbsp;du&nbsp;pipeline&nbsp;de&nbsp;prédiction&nbsp;documentaire&nbsp;multi-label.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-predict_tech"><strong>predict_tech</strong></a>()</dt><dd><span class="code">Effectue&nbsp;les&nbsp;prédictions&nbsp;de&nbsp;labels&nbsp;'hard'&nbsp;et&nbsp;'soft'&nbsp;sur&nbsp;un&nbsp;jeu&nbsp;de&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Description&nbsp;détaillée<br>
+----------------------<br>
+1.&nbsp;Charge&nbsp;le&nbsp;modèle&nbsp;de&nbsp;régression&nbsp;logistique&nbsp;multi-label&nbsp;(One-vs-Rest)<br>
+2.&nbsp;Charge&nbsp;les&nbsp;vecteurs&nbsp;TF-IDF&nbsp;et&nbsp;vérifie&nbsp;que&nbsp;toutes&nbsp;les&nbsp;features&nbsp;du&nbsp;modèle&nbsp;sont&nbsp;présentes<br>
+3.&nbsp;Calcule&nbsp;les&nbsp;probabilités&nbsp;de&nbsp;chaque&nbsp;label&nbsp;pour&nbsp;chaque&nbsp;document<br>
+4.&nbsp;Applique&nbsp;un&nbsp;seuil&nbsp;de&nbsp;confiance&nbsp;(0.5)&nbsp;pour&nbsp;déterminer&nbsp;la&nbsp;présence&nbsp;du&nbsp;label<br>
+5.&nbsp;Fusionne&nbsp;les&nbsp;deux&nbsp;sorties&nbsp;(`hard`&nbsp;/&nbsp;`soft`)&nbsp;en&nbsp;un&nbsp;label&nbsp;combiné&nbsp;(`both`,&nbsp;`hard`,&nbsp;`soft`,&nbsp;`unknown`)<br>
+6.&nbsp;Sauvegarde&nbsp;les&nbsp;résultats&nbsp;avec&nbsp;le&nbsp;score&nbsp;de&nbsp;confiance&nbsp;global<br>
+&nbsp;<br>
+Notes<br>
+-----<br>
+-&nbsp;Le&nbsp;modèle&nbsp;doit&nbsp;avoir&nbsp;été&nbsp;entraîné&nbsp;et&nbsp;sauvegardé&nbsp;au&nbsp;préalable&nbsp;via&nbsp;`train_tech.py`.<br>
+-&nbsp;Le&nbsp;seuil&nbsp;de&nbsp;prédiction&nbsp;est&nbsp;configurable&nbsp;via&nbsp;la&nbsp;variable&nbsp;`threshold`.<br>
+-&nbsp;Si&nbsp;une&nbsp;feature&nbsp;attendue&nbsp;par&nbsp;le&nbsp;modèle&nbsp;est&nbsp;absente&nbsp;du&nbsp;CSV,&nbsp;elle&nbsp;est&nbsp;ajoutée&nbsp;et&nbsp;remplie&nbsp;par&nbsp;des&nbsp;zéros.<br>
+-&nbsp;La&nbsp;confiance&nbsp;globale&nbsp;est&nbsp;le&nbsp;**maximum**&nbsp;entre&nbsp;la&nbsp;proba&nbsp;'hard'&nbsp;et&nbsp;la&nbsp;proba&nbsp;'soft'.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Les&nbsp;prédictions&nbsp;sont&nbsp;sauvegardées&nbsp;dans&nbsp;un&nbsp;fichier&nbsp;CSV&nbsp;à&nbsp;la&nbsp;fin&nbsp;de&nbsp;l’exécution.</span></dd></dl>
+</td></tr></table>
+</body></html>

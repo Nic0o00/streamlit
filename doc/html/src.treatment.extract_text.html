@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.treatment.extract_text</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.treatment.html" class="white">treatment</a>.extract_text</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Ctreatment%5Cextract_text.py">c:\users\nicol\desktop\project_scoringapp\src\treatment\extract_text.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;:&nbsp;extract_text_from_pdf<br>
+==============================<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;permet&nbsp;d'extraire&nbsp;et&nbsp;de&nbsp;normaliser&nbsp;le&nbsp;texte&nbsp;de&nbsp;fichiers&nbsp;PDF.<br>
+Il&nbsp;utilise&nbsp;la&nbsp;librairie&nbsp;`PyMuPDF`&nbsp;(fitz)&nbsp;pour&nbsp;lire&nbsp;les&nbsp;PDF&nbsp;et&nbsp;ajoute&nbsp;des<br>
+séparateurs&nbsp;de&nbsp;slides.<br>
+&nbsp;<br>
+Fonctions&nbsp;principales&nbsp;:<br>
+-----------------------<br>
+-&nbsp;`<a href="#-normalize_text">normalize_text</a>(text)`&nbsp;:&nbsp;normalise&nbsp;le&nbsp;texte&nbsp;en&nbsp;minuscules,&nbsp;supprime&nbsp;les<br>
+&nbsp;&nbsp;caractères&nbsp;spéciaux&nbsp;et&nbsp;réduit&nbsp;les&nbsp;espaces&nbsp;multiples.<br>
+-&nbsp;`<a href="#-extract_text_from_pdf">extract_text_from_pdf</a>(pdf_path)`&nbsp;:&nbsp;extrait&nbsp;le&nbsp;texte&nbsp;d'un&nbsp;PDF&nbsp;et&nbsp;applique<br>
+&nbsp;&nbsp;la&nbsp;normalisation,&nbsp;en&nbsp;ajoutant&nbsp;un&nbsp;séparateur&nbsp;"---slide---"&nbsp;entre&nbsp;les&nbsp;pages.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="fitz.html">fitz</a><br>
+</td><td class="multicolumn"><a href="re.html">re</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-extract_text_from_pdf"><strong>extract_text_from_pdf</strong></a>(pdf_path)</dt><dd><span class="code">Extrait&nbsp;le&nbsp;texte&nbsp;d'un&nbsp;PDF&nbsp;et&nbsp;ajoute&nbsp;un&nbsp;séparateur&nbsp;de&nbsp;slide.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+pdf_path&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Chemin&nbsp;vers&nbsp;le&nbsp;fichier&nbsp;PDF&nbsp;à&nbsp;traiter.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Texte&nbsp;complet&nbsp;du&nbsp;PDF&nbsp;normalisé,&nbsp;avec&nbsp;"---slide---"&nbsp;comme&nbsp;séparateur<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entre&nbsp;les&nbsp;pages.<br>
+&nbsp;<br>
+Notes<br>
+-----<br>
+-&nbsp;Utilise&nbsp;`fitz`&nbsp;pour&nbsp;lire&nbsp;les&nbsp;pages&nbsp;du&nbsp;PDF.<br>
+-&nbsp;Chaque&nbsp;page&nbsp;est&nbsp;concaténée&nbsp;avec&nbsp;un&nbsp;retour&nbsp;à&nbsp;la&nbsp;ligne&nbsp;et&nbsp;le&nbsp;marqueur&nbsp;de&nbsp;slide.<br>
+-&nbsp;Le&nbsp;texte&nbsp;final&nbsp;est&nbsp;ensuite&nbsp;normalisé&nbsp;via&nbsp;`normalize_text`.</span></dd></dl>
+ <dl><dt><a name="-normalize_text"><strong>normalize_text</strong></a>(text)</dt><dd><span class="code">Normalise&nbsp;le&nbsp;texte.<br>
+&nbsp;<br>
+Étapes&nbsp;de&nbsp;normalisation&nbsp;:<br>
+-------------------------<br>
+1.&nbsp;Passage&nbsp;en&nbsp;minuscules<br>
+2.&nbsp;Suppression&nbsp;des&nbsp;caractères&nbsp;spéciaux&nbsp;(ne&nbsp;garde&nbsp;que&nbsp;lettres,&nbsp;chiffres,&nbsp;accents&nbsp;et&nbsp;tirets)<br>
+3.&nbsp;Remplacement&nbsp;des&nbsp;multiples&nbsp;espaces&nbsp;par&nbsp;un&nbsp;seul&nbsp;espace<br>
+4.&nbsp;Suppression&nbsp;des&nbsp;espaces&nbsp;en&nbsp;début&nbsp;et&nbsp;fin&nbsp;de&nbsp;texte<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+text&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Texte&nbsp;à&nbsp;normaliser.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Texte&nbsp;normalisé.</span></dd></dl>
+</td></tr></table>
+</body></html>

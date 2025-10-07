@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.domain.model_domain</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.domain.html" class="white">domain</a>.model_domain</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Cdomain%5Cmodel_domain.py">c:\users\nicol\desktop\project_scoringapp\src\ml\domain\model_domain.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;`train_domain_select.py`<br>
+&nbsp;<br>
+Ce&nbsp;script&nbsp;entraîne&nbsp;un&nbsp;modèle&nbsp;de&nbsp;classification&nbsp;supervisée&nbsp;pour&nbsp;prédire&nbsp;le&nbsp;*domaine*<br>
+associé&nbsp;à&nbsp;un&nbsp;document&nbsp;à&nbsp;partir&nbsp;de&nbsp;ses&nbsp;vecteurs&nbsp;TF-IDF.&nbsp;&nbsp;<br>
+Il&nbsp;combine&nbsp;plusieurs&nbsp;étapes&nbsp;de&nbsp;sélection&nbsp;et&nbsp;réduction&nbsp;de&nbsp;dimensions,&nbsp;puis&nbsp;entraîne<br>
+un&nbsp;classifieur&nbsp;logistique&nbsp;avec&nbsp;pondération&nbsp;des&nbsp;classes.<br>
+&nbsp;<br>
+Fonctionnalités&nbsp;principales&nbsp;:<br>
+-----------------------------<br>
+-&nbsp;Sélection&nbsp;de&nbsp;features&nbsp;via&nbsp;test&nbsp;du&nbsp;chi²&nbsp;(`SelectKBest`)<br>
+-&nbsp;Réduction&nbsp;dimensionnelle&nbsp;via&nbsp;SVD&nbsp;(`TruncatedSVD`)<br>
+-&nbsp;Calcul&nbsp;de&nbsp;similarités&nbsp;cosinus&nbsp;entre&nbsp;documents&nbsp;et&nbsp;centroïdes&nbsp;de&nbsp;classes<br>
+-&nbsp;Normalisation&nbsp;des&nbsp;features&nbsp;finales<br>
+-&nbsp;Entraînement&nbsp;d’un&nbsp;modèle&nbsp;de&nbsp;régression&nbsp;logistique&nbsp;pondérée<br>
+-&nbsp;Sauvegarde&nbsp;de&nbsp;tous&nbsp;les&nbsp;objets&nbsp;nécessaires&nbsp;à&nbsp;l’inférence&nbsp;:&nbsp;sélecteur,&nbsp;SVD,&nbsp;scaler,<br>
+&nbsp;&nbsp;centroïdes,&nbsp;classifieur,&nbsp;encodeur&nbsp;et&nbsp;liste&nbsp;des&nbsp;colonnes&nbsp;non&nbsp;nulles<br>
+&nbsp;<br>
+Fichiers&nbsp;d’entrée&nbsp;:<br>
+-------------------<br>
+-&nbsp;`data/processed/tfidf_vectors.csv`&nbsp;:&nbsp;vecteurs&nbsp;TF-IDF<br>
+-&nbsp;`data/labeled.csv`&nbsp;:&nbsp;labels&nbsp;de&nbsp;domaines<br>
+&nbsp;<br>
+Fichiers&nbsp;de&nbsp;sortie&nbsp;:<br>
+--------------------<br>
+-&nbsp;`models/domain_selector.joblib`&nbsp;:&nbsp;sélecteur&nbsp;de&nbsp;features&nbsp;chi²<br>
+-&nbsp;`models/domain_svd.joblib`&nbsp;:&nbsp;modèle&nbsp;de&nbsp;réduction&nbsp;dimensionnelle&nbsp;SVD<br>
+-&nbsp;`models/domain_scaler.joblib`&nbsp;:&nbsp;scaler&nbsp;pour&nbsp;standardisation<br>
+-&nbsp;`models/domain_centroids.joblib`&nbsp;:&nbsp;centroïdes&nbsp;calculés&nbsp;pour&nbsp;chaque&nbsp;classe<br>
+-&nbsp;`models/domain_clf.joblib`&nbsp;:&nbsp;modèle&nbsp;de&nbsp;régression&nbsp;logistique&nbsp;entraîné<br>
+-&nbsp;`models/domain_label_encoder.joblib`&nbsp;:&nbsp;encodeur&nbsp;de&nbsp;labels<br>
+-&nbsp;`models/domain_nonzero_columns.joblib`&nbsp;:&nbsp;liste&nbsp;des&nbsp;colonnes&nbsp;non&nbsp;nulles&nbsp;utilisées</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-train_domain"><strong>train_domain</strong></a>()</dt><dd><span class="code">Entraîne&nbsp;un&nbsp;modèle&nbsp;de&nbsp;classification&nbsp;du&nbsp;domaine&nbsp;à&nbsp;partir&nbsp;de&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Étapes&nbsp;principales&nbsp;:<br>
+--------------------<br>
+1.&nbsp;Chargement&nbsp;et&nbsp;fusion&nbsp;des&nbsp;données&nbsp;de&nbsp;vecteurs&nbsp;et&nbsp;labels.<br>
+2.&nbsp;Nettoyage,&nbsp;conversion&nbsp;et&nbsp;suppression&nbsp;des&nbsp;features&nbsp;nulles.<br>
+3.&nbsp;Sélection&nbsp;de&nbsp;K&nbsp;meilleures&nbsp;features&nbsp;via&nbsp;test&nbsp;du&nbsp;chi².<br>
+4.&nbsp;Calcul&nbsp;de&nbsp;centroïdes&nbsp;moyens&nbsp;par&nbsp;classe&nbsp;et&nbsp;de&nbsp;similarités&nbsp;cosinus.<br>
+5.&nbsp;Réduction&nbsp;dimensionnelle&nbsp;via&nbsp;SVD.<br>
+6.&nbsp;Normalisation&nbsp;des&nbsp;features&nbsp;et&nbsp;concaténation&nbsp;des&nbsp;similarités.<br>
+7.&nbsp;Entraînement&nbsp;du&nbsp;modèle&nbsp;de&nbsp;régression&nbsp;logistique&nbsp;(avec&nbsp;`class_weight='balanced'`).<br>
+8.&nbsp;Sauvegarde&nbsp;de&nbsp;tous&nbsp;les&nbsp;objets&nbsp;nécessaires&nbsp;à&nbsp;la&nbsp;prédiction&nbsp;future.<br>
+&nbsp;<br>
+Exceptions<br>
+----------<br>
+RuntimeError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Si&nbsp;aucune&nbsp;correspondance&nbsp;entre&nbsp;vecteurs&nbsp;et&nbsp;labels&nbsp;n’est&nbsp;trouvée.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>BASE</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\domain'<br>
+<strong>CLASS_WEIGHTED</strong> = True<br>
+<strong>K_SELECT</strong> = 3000<br>
+<strong>LAB_CSV</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\domain\..\..\..\data\labeled.csv'<br>
+<strong>MODELS_DIR</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\domain\..\..\..\models'<br>
+<strong>SVD_COMPONENTS</strong> = 150<br>
+<strong>VECT_CSV</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\domain\..\..\..\data\processed\tfidf_vectors.csv'</td></tr></table>
+</body></html>

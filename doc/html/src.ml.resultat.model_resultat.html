@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.resultat.model_resultat</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.resultat.html" class="white">resultat</a>.model_resultat</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Cresultat%5Cmodel_resultat.py">c:\users\nicol\desktop\project_scoringapp\src\ml\resultat\model_resultat.py</a></td></tr></table>
+    <p><span class="code">Script&nbsp;d'entraînement&nbsp;d'un&nbsp;modèle&nbsp;Random&nbsp;Forest&nbsp;pour&nbsp;classifier&nbsp;les&nbsp;documents&nbsp;selon&nbsp;leur&nbsp;résultat.<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;:<br>
+1.&nbsp;Charge&nbsp;les&nbsp;vecteurs&nbsp;TF-IDF&nbsp;et&nbsp;les&nbsp;labels&nbsp;de&nbsp;classification.<br>
+2.&nbsp;Filtre&nbsp;et&nbsp;nettoie&nbsp;les&nbsp;données&nbsp;pour&nbsp;ne&nbsp;conserver&nbsp;que&nbsp;les&nbsp;entrées&nbsp;valides.<br>
+3.&nbsp;Entraîne&nbsp;un&nbsp;modèle&nbsp;de&nbsp;classification&nbsp;RandomForest&nbsp;sur&nbsp;l’ensemble&nbsp;du&nbsp;jeu&nbsp;de&nbsp;données.<br>
+4.&nbsp;Évalue&nbsp;le&nbsp;modèle&nbsp;sur&nbsp;les&nbsp;données&nbsp;d’entraînement&nbsp;(évaluation&nbsp;interne&nbsp;rapide).<br>
+5.&nbsp;Sauvegarde&nbsp;le&nbsp;modèle&nbsp;entraîné&nbsp;pour&nbsp;une&nbsp;utilisation&nbsp;ultérieure.<br>
+&nbsp;<br>
+Entrées&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;data/processed/tfidf_vectors.csv&nbsp;:&nbsp;vecteurs&nbsp;TF-IDF&nbsp;avec&nbsp;identifiant&nbsp;'doc'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;data/labeled.csv&nbsp;:&nbsp;fichier&nbsp;contenant&nbsp;les&nbsp;labels&nbsp;('resultat')&nbsp;associés&nbsp;aux&nbsp;documents<br>
+&nbsp;<br>
+Sortie&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;models/deck_classifier_rf.joblib&nbsp;:&nbsp;modèle&nbsp;RandomForest&nbsp;entraîné<br>
+&nbsp;<br>
+Auteur&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Script&nbsp;conçu&nbsp;pour&nbsp;un&nbsp;pipeline&nbsp;de&nbsp;classification&nbsp;documentaire&nbsp;basé&nbsp;sur&nbsp;des&nbsp;représentations&nbsp;TF-IDF.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><span class="code">Fonction&nbsp;principale&nbsp;d'entraînement&nbsp;du&nbsp;modèle&nbsp;RandomForestClassifier.<br>
+&nbsp;<br>
+Étapes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;Chargement&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF&nbsp;et&nbsp;des&nbsp;labels.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;Nettoyage&nbsp;des&nbsp;labels&nbsp;pour&nbsp;ne&nbsp;conserver&nbsp;que&nbsp;les&nbsp;catégories&nbsp;valides.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;Alignement&nbsp;des&nbsp;jeux&nbsp;de&nbsp;données&nbsp;(vecteurs&nbsp;↔&nbsp;labels).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4.&nbsp;Entraînement&nbsp;d’un&nbsp;modèle&nbsp;RandomForest&nbsp;sur&nbsp;les&nbsp;données&nbsp;complètes.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5.&nbsp;Évaluation&nbsp;rapide&nbsp;sur&nbsp;les&nbsp;données&nbsp;d’entraînement.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;6.&nbsp;Sauvegarde&nbsp;du&nbsp;modèle&nbsp;entraîné&nbsp;au&nbsp;format&nbsp;.joblib.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>BASE</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\resultat'<br>
+<strong>LABELED_CSV</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\resultat\..\..\..\data\labeled.csv'<br>
+<strong>MODEL_PATH</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\resultat\..\..\..\models\deck_classifier_rf.joblib'<br>
+<strong>VECT_CSV</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\resultat\..\..\..\data\processed\tfidf_vectors.csv'</td></tr></table>
+</body></html>

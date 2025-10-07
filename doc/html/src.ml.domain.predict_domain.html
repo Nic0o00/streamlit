@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.domain.predict_domain</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.domain.html" class="white">domain</a>.predict_domain</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Cdomain%5Cpredict_domain.py">c:\users\nicol\desktop\project_scoringapp\src\ml\domain\predict_domain.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;de&nbsp;prédiction&nbsp;du&nbsp;domaine&nbsp;à&nbsp;partir&nbsp;de&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Ce&nbsp;script&nbsp;charge&nbsp;un&nbsp;ensemble&nbsp;de&nbsp;modèles&nbsp;entraînés&nbsp;(sélection&nbsp;de&nbsp;features,<br>
+réduction&nbsp;de&nbsp;dimension,&nbsp;scaler,&nbsp;centroides&nbsp;et&nbsp;classifieur)&nbsp;afin&nbsp;de&nbsp;prédire<br>
+le&nbsp;domaine&nbsp;associé&nbsp;à&nbsp;chaque&nbsp;document&nbsp;vectorisé.<br>
+&nbsp;<br>
+Étapes&nbsp;principales&nbsp;:<br>
+1.&nbsp;Chargement&nbsp;des&nbsp;modèles&nbsp;préalablement&nbsp;entraînés.<br>
+2.&nbsp;Chargement&nbsp;du&nbsp;fichier&nbsp;contenant&nbsp;les&nbsp;vecteurs&nbsp;TF-IDF.<br>
+3.&nbsp;Préparation&nbsp;et&nbsp;sélection&nbsp;des&nbsp;features&nbsp;(mêmes&nbsp;transformations&nbsp;que&nbsp;pour&nbsp;l'entraînement).<br>
+4.&nbsp;Calcul&nbsp;des&nbsp;similarités&nbsp;cosinus&nbsp;avec&nbsp;les&nbsp;centroides.<br>
+5.&nbsp;Réduction&nbsp;de&nbsp;dimension&nbsp;(SVD)&nbsp;+&nbsp;mise&nbsp;à&nbsp;l’échelle.<br>
+6.&nbsp;Prédiction&nbsp;du&nbsp;domaine&nbsp;via&nbsp;le&nbsp;classifieur&nbsp;logistique.<br>
+7.&nbsp;Sauvegarde&nbsp;des&nbsp;résultats&nbsp;dans&nbsp;un&nbsp;CSV&nbsp;avec&nbsp;les&nbsp;scores&nbsp;de&nbsp;confiance.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-predict_domain"><strong>predict_domain</strong></a>()</dt><dd><span class="code">Applique&nbsp;le&nbsp;pipeline&nbsp;complet&nbsp;de&nbsp;prédiction&nbsp;du&nbsp;domaine&nbsp;à&nbsp;partir&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Étapes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Charge&nbsp;tous&nbsp;les&nbsp;objets&nbsp;(sélecteur,&nbsp;SVD,&nbsp;scaler,&nbsp;centroides,&nbsp;classifieur,&nbsp;label&nbsp;encoder).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Recrée&nbsp;le&nbsp;même&nbsp;espace&nbsp;de&nbsp;features&nbsp;que&nbsp;lors&nbsp;de&nbsp;l’entraînement.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Calcule&nbsp;les&nbsp;similarités&nbsp;cosinus&nbsp;avec&nbsp;les&nbsp;centroides.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Transforme&nbsp;les&nbsp;features&nbsp;(SVD&nbsp;+&nbsp;standardisation).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Combine&nbsp;les&nbsp;features&nbsp;finales&nbsp;et&nbsp;exécute&nbsp;la&nbsp;prédiction&nbsp;du&nbsp;domaine.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Sauvegarde&nbsp;le&nbsp;résultat&nbsp;dans&nbsp;un&nbsp;fichier&nbsp;CSV&nbsp;avec&nbsp;score&nbsp;de&nbsp;confiance.<br>
+&nbsp;<br>
+Sorties&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Un&nbsp;fichier&nbsp;CSV&nbsp;`tfidf_vectors_with_domain_predictions.csv`&nbsp;dans&nbsp;`output/predictions/`,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contenant&nbsp;les&nbsp;colonnes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;doc&nbsp;:&nbsp;identifiant&nbsp;du&nbsp;document<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;predicted_domain&nbsp;:&nbsp;domaine&nbsp;prédit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;confidence_score&nbsp;:&nbsp;score&nbsp;de&nbsp;confiance&nbsp;associé</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>BASE</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\domain'<br>
+<strong>MODELS_DIR</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\domain\..\..\..\models'<br>
+<strong>OUT</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\domain\..\..\..\output\predictions'<br>
+<strong>OUT_FILE</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml...ictions\tfidf_vectors_with_domain_predictions.csv'<br>
+<strong>VECT_CSV</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\domain\..\..\..\data\processed\tfidf_vectors.csv'</td></tr></table>
+</body></html>

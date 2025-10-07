@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.evaluate</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.evaluate</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Cevaluate.py">c:\users\nicol\desktop\project_scoringapp\src\ml\evaluate.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;:&nbsp;evaluate_predictions<br>
+=============================<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;permet&nbsp;d’évaluer&nbsp;les&nbsp;prédictions&nbsp;d’un&nbsp;label&nbsp;donné&nbsp;par&nbsp;rapport&nbsp;aux&nbsp;labels<br>
+réels&nbsp;dans&nbsp;le&nbsp;fichier&nbsp;`labeled_total.csv`.<br>
+&nbsp;<br>
+Fonction&nbsp;principale&nbsp;:<br>
+--------------------<br>
+-&nbsp;`<a href="#-evaluate">evaluate</a>(label_col)`&nbsp;:&nbsp;compare&nbsp;les&nbsp;prédictions&nbsp;et&nbsp;les&nbsp;labels,&nbsp;calcule&nbsp;l’accuracy,<br>
+&nbsp;&nbsp;affiche&nbsp;la&nbsp;répartition&nbsp;des&nbsp;classes,&nbsp;les&nbsp;documents&nbsp;mal&nbsp;prédits&nbsp;et&nbsp;la&nbsp;matrice&nbsp;de&nbsp;confusion.<br>
+&nbsp;<br>
+Exemple&nbsp;d’utilisation&nbsp;:<br>
+-----------------------<br>
+&gt;&gt;&gt;&nbsp;<a href="#-evaluate">evaluate</a>("tech")<br>
+&gt;&gt;&gt;&nbsp;<a href="#-evaluate">evaluate</a>("domain")<br>
+&gt;&gt;&gt;&nbsp;<a href="#-evaluate">evaluate</a>("country")<br>
+&nbsp;<br>
+Sorties&nbsp;:<br>
+---------<br>
+-&nbsp;Affichage&nbsp;console&nbsp;des&nbsp;métriques&nbsp;et&nbsp;des&nbsp;erreurs<br>
+-&nbsp;Retourne&nbsp;un&nbsp;tuple&nbsp;(df_eval,&nbsp;df_wrong,&nbsp;cm_df)&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;`df_eval`&nbsp;:&nbsp;DataFrame&nbsp;fusionné&nbsp;avec&nbsp;colonne&nbsp;"correct"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;`df_wrong`&nbsp;:&nbsp;DataFrame&nbsp;des&nbsp;documents&nbsp;mal&nbsp;prédits<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;`cm_df`&nbsp;:&nbsp;matrice&nbsp;de&nbsp;confusion&nbsp;au&nbsp;format&nbsp;DataFrame</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-evaluate"><strong>evaluate</strong></a>(label_col)</dt><dd><span class="code">Évalue&nbsp;les&nbsp;prédictions&nbsp;pour&nbsp;un&nbsp;label&nbsp;donné&nbsp;en&nbsp;comparant&nbsp;avec&nbsp;les&nbsp;labels&nbsp;réels.<br>
+&nbsp;<br>
+Paramètres<br>
+----------<br>
+label_col&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nom&nbsp;du&nbsp;label&nbsp;à&nbsp;évaluer&nbsp;(ex:&nbsp;"tech",&nbsp;"domain",&nbsp;"country",&nbsp;"resultat").<br>
+&nbsp;<br>
+Étapes<br>
+-------<br>
+1.&nbsp;Chargement&nbsp;du&nbsp;fichier&nbsp;de&nbsp;prédictions&nbsp;et&nbsp;du&nbsp;fichier&nbsp;`labeled_total.csv`<br>
+2.&nbsp;Harmonisation&nbsp;des&nbsp;colonnes&nbsp;"doc"&nbsp;pour&nbsp;jointure<br>
+3.&nbsp;Fusion&nbsp;des&nbsp;prédictions&nbsp;et&nbsp;des&nbsp;labels&nbsp;réels&nbsp;sur&nbsp;"doc"<br>
+4.&nbsp;Exclusion&nbsp;des&nbsp;valeurs&nbsp;vides&nbsp;ou&nbsp;NaN<br>
+5.&nbsp;Calcul&nbsp;de&nbsp;l’accuracy&nbsp;et&nbsp;du&nbsp;nombre&nbsp;de&nbsp;prédictions&nbsp;correctes/incorrectes<br>
+6.&nbsp;Affichage&nbsp;de&nbsp;la&nbsp;répartition&nbsp;des&nbsp;classes&nbsp;réelles&nbsp;et&nbsp;prédites<br>
+7.&nbsp;Affichage&nbsp;des&nbsp;documents&nbsp;mal&nbsp;prédits<br>
+8.&nbsp;Calcul&nbsp;et&nbsp;affichage&nbsp;de&nbsp;la&nbsp;matrice&nbsp;de&nbsp;confusion<br>
+&nbsp;<br>
+Retour<br>
+------<br>
+tuple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;df_eval&nbsp;:&nbsp;DataFrame&nbsp;fusionné&nbsp;avec&nbsp;colonne&nbsp;"correct"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;df_wrong&nbsp;:&nbsp;DataFrame&nbsp;des&nbsp;documents&nbsp;mal&nbsp;prédits<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;cm_df&nbsp;:&nbsp;matrice&nbsp;de&nbsp;confusion&nbsp;(DataFrame)</span></dd></dl>
+</td></tr></table>
+</body></html>

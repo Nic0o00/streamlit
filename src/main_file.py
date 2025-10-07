@@ -6,7 +6,7 @@ from treatment.translate import translate_text
 from vectorisation.vectorize_text import vectorize_text
 
 #from ml.model_domain import predict_domain
-from ml.techno.predict_tech import predict_tech
+from ml.tech.predict_tech import predict_tech
 from ml.domain.predict_domain import predict_domain
 from ml.country.predict_country import predict_country
 from ml.resultat.predict_resultat import predict_resultat

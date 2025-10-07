@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.vectorisation.vectorize_text</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.vectorisation.html" class="white">vectorisation</a>.vectorize_text</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cvectorisation%5Cvectorize_text.py">c:\users\nicol\desktop\project_scoringapp\src\vectorisation\vectorize_text.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;:&nbsp;vectorize_text<br>
+=======================<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;permet&nbsp;de&nbsp;générer&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF&nbsp;enrichis&nbsp;pour&nbsp;les&nbsp;documents<br>
+texte&nbsp;présents&nbsp;dans&nbsp;le&nbsp;dossier&nbsp;`data/processed/translated/`.<br>
+&nbsp;<br>
+Fonctions&nbsp;principales&nbsp;:<br>
+-----------------------<br>
+-&nbsp;`<a href="#-vectorize_text">vectorize_text</a>()`&nbsp;:&nbsp;lit&nbsp;tous&nbsp;les&nbsp;fichiers&nbsp;texte,&nbsp;construit&nbsp;les&nbsp;vecteurs&nbsp;TF-IDF<br>
+&nbsp;&nbsp;(1-grammes,&nbsp;2-grammes,&nbsp;3-grammes)&nbsp;et&nbsp;sauvegarde&nbsp;le&nbsp;DataFrame&nbsp;résultant&nbsp;dans<br>
+&nbsp;&nbsp;`data/processed/tfidf_vectors.csv`.<br>
+&nbsp;<br>
+Paramètres&nbsp;TF-IDF&nbsp;utilisés&nbsp;:<br>
+----------------------------<br>
+-&nbsp;ngram_range=(1,3)&nbsp;:&nbsp;prend&nbsp;en&nbsp;compte&nbsp;unigrams,&nbsp;bigrams&nbsp;et&nbsp;trigrams<br>
+-&nbsp;max_features=7000&nbsp;&nbsp;:&nbsp;limite&nbsp;le&nbsp;nombre&nbsp;de&nbsp;termes&nbsp;pour&nbsp;éviter&nbsp;l’explosion&nbsp;mémoire<br>
+-&nbsp;min_df=2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;ignore&nbsp;les&nbsp;termes&nbsp;trop&nbsp;rares</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-vectorize_text"><strong>vectorize_text</strong></a>()</dt><dd><span class="code">Lit&nbsp;tous&nbsp;les&nbsp;fichiers&nbsp;texte&nbsp;du&nbsp;dossier&nbsp;`translated`,&nbsp;calcule&nbsp;les&nbsp;vecteurs<br>
+TF-IDF&nbsp;enrichis&nbsp;et&nbsp;sauvegarde&nbsp;le&nbsp;résultat&nbsp;dans&nbsp;un&nbsp;CSV.<br>
+&nbsp;<br>
+Étapes&nbsp;:<br>
+--------<br>
+1.&nbsp;Lecture&nbsp;de&nbsp;tous&nbsp;les&nbsp;fichiers&nbsp;.txt&nbsp;dans&nbsp;`data/processed/translated/`<br>
+2.&nbsp;Stockage&nbsp;dans&nbsp;un&nbsp;DataFrame&nbsp;avec&nbsp;colonnes&nbsp;:&nbsp;"doc"&nbsp;et&nbsp;"text"<br>
+3.&nbsp;Construction&nbsp;d'un&nbsp;vecteur&nbsp;TF-IDF&nbsp;avec&nbsp;ngram_range=(1,3)<br>
+4.&nbsp;Conversion&nbsp;en&nbsp;DataFrame&nbsp;avec&nbsp;les&nbsp;termes&nbsp;comme&nbsp;colonnes<br>
+5.&nbsp;Ajout&nbsp;de&nbsp;la&nbsp;colonne&nbsp;"doc"&nbsp;en&nbsp;première&nbsp;position<br>
+6.&nbsp;Sauvegarde&nbsp;du&nbsp;DataFrame&nbsp;TF-IDF&nbsp;dans&nbsp;`data/processed/tfidf_vectors.csv`<br>
+&nbsp;<br>
+Raises<br>
+------<br>
+ValueError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Si&nbsp;aucun&nbsp;fichier&nbsp;.txt&nbsp;n'est&nbsp;trouvé&nbsp;dans&nbsp;le&nbsp;dossier&nbsp;source.</span></dd></dl>
+</td></tr></table>
+</body></html>

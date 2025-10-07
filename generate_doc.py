@@ -22,8 +22,8 @@ modules = [
     "src.ml.domain.model_domain",
     "src.ml.domain.predict_domain",
 
-    "src.ml.deck.model_resultat",
-    "src.ml.deck.predict_resultat",
+    "src.ml.resultat.model_resultat",
+    "src.ml.resultat.predict_resultat",
 
     "src.ml.tech.model_tech",
     "src.ml.tech.predict_tech",

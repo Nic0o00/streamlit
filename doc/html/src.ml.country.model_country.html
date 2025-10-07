@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.country.model_country</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.country.html" class="white">country</a>.model_country</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Ccountry%5Cmodel_country.py">c:\users\nicol\desktop\project_scoringapp\src\ml\country\model_country.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;d'entraînement&nbsp;d'un&nbsp;modèle&nbsp;Gradient&nbsp;Boosting&nbsp;pour&nbsp;la&nbsp;prédiction&nbsp;de&nbsp;pays.<br>
+&nbsp;<br>
+Ce&nbsp;script&nbsp;entraîne&nbsp;un&nbsp;modèle&nbsp;de&nbsp;classification&nbsp;supervisée&nbsp;(HistGradientBoostingClassifier)<br>
+pour&nbsp;prédire&nbsp;le&nbsp;pays&nbsp;associé&nbsp;à&nbsp;un&nbsp;document&nbsp;en&nbsp;fonction&nbsp;de&nbsp;ses&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Fonctionnalités&nbsp;:<br>
+-&nbsp;Colonne&nbsp;cible&nbsp;:&nbsp;'country'&nbsp;(France,&nbsp;Germany,&nbsp;Benelux,&nbsp;Others)<br>
+-&nbsp;Utilise&nbsp;un&nbsp;Gradient&nbsp;Boosting&nbsp;avec&nbsp;pondération&nbsp;automatique&nbsp;des&nbsp;classes&nbsp;(`class_weight='balanced'`)<br>
+-&nbsp;Validation&nbsp;croisée&nbsp;stratifiée&nbsp;conditionnelle&nbsp;selon&nbsp;la&nbsp;taille&nbsp;minimale&nbsp;des&nbsp;classes<br>
+-&nbsp;Sauvegarde&nbsp;automatique&nbsp;du&nbsp;modèle&nbsp;et&nbsp;de&nbsp;l'encodeur&nbsp;de&nbsp;labels&nbsp;dans&nbsp;le&nbsp;répertoire&nbsp;`models`<br>
+&nbsp;<br>
+Fichiers&nbsp;utilisés&nbsp;:<br>
+-&nbsp;Données&nbsp;d'entrée&nbsp;:&nbsp;`data/processed/tfidf_vectors.csv`<br>
+-&nbsp;Étiquettes&nbsp;:&nbsp;`data/labeled.csv`<br>
+-&nbsp;Modèles&nbsp;sauvegardés&nbsp;:&nbsp;`models/country_gb_model.joblib`&nbsp;et&nbsp;`models/country_label_encoder.joblib`</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-train_country"><strong>train_country</strong></a>()</dt><dd><span class="code">Entraîne&nbsp;un&nbsp;modèle&nbsp;HistGradientBoostingClassifier&nbsp;pour&nbsp;prédire&nbsp;le&nbsp;pays&nbsp;associé&nbsp;à&nbsp;un&nbsp;document.<br>
+&nbsp;<br>
+Étapes&nbsp;principales&nbsp;:<br>
+1.&nbsp;Chargement&nbsp;des&nbsp;données&nbsp;TF-IDF&nbsp;et&nbsp;des&nbsp;labels&nbsp;depuis&nbsp;les&nbsp;fichiers&nbsp;CSV.<br>
+2.&nbsp;Fusion&nbsp;et&nbsp;nettoyage&nbsp;des&nbsp;DataFrames.<br>
+3.&nbsp;Préparation&nbsp;des&nbsp;features&nbsp;(X)&nbsp;et&nbsp;de&nbsp;la&nbsp;cible&nbsp;(y).<br>
+4.&nbsp;Encodage&nbsp;des&nbsp;labels&nbsp;de&nbsp;pays&nbsp;en&nbsp;entiers&nbsp;via&nbsp;LabelEncoder.<br>
+5.&nbsp;Entraînement&nbsp;d’un&nbsp;modèle&nbsp;Gradient&nbsp;Boosting&nbsp;avec&nbsp;pondération&nbsp;équilibrée&nbsp;des&nbsp;classes.<br>
+6.&nbsp;Validation&nbsp;croisée&nbsp;stratifiée&nbsp;conditionnelle&nbsp;si&nbsp;suffisamment&nbsp;d’échantillons.<br>
+7.&nbsp;Sauvegarde&nbsp;du&nbsp;modèle&nbsp;entraîné&nbsp;et&nbsp;de&nbsp;l’encodeur.<br>
+&nbsp;<br>
+Raises<br>
+------<br>
+ValueError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Si&nbsp;aucune&nbsp;colonne&nbsp;de&nbsp;features&nbsp;n’est&nbsp;trouvée&nbsp;ou&nbsp;si&nbsp;toutes&nbsp;les&nbsp;valeurs&nbsp;sont&nbsp;nulles.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Si&nbsp;le&nbsp;nombre&nbsp;de&nbsp;lignes&nbsp;entre&nbsp;X&nbsp;et&nbsp;y&nbsp;ne&nbsp;correspond&nbsp;pas.</span></dd></dl>
+</td></tr></table>
+</body></html>

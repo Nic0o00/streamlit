@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.tech.model_tech</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.tech.html" class="white">tech</a>.model_tech</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Ctech%5Cmodel_tech.py">c:\users\nicol\desktop\project_scoringapp\src\ml\tech\model_tech.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;:&nbsp;train_tech<br>
+====================<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;entraîne&nbsp;un&nbsp;classifieur&nbsp;**multi-label**&nbsp;pour&nbsp;la&nbsp;technologie&nbsp;d’un&nbsp;document&nbsp;<br>
+(en&nbsp;distinguant&nbsp;les&nbsp;catégories&nbsp;"hard"&nbsp;et&nbsp;"soft")&nbsp;à&nbsp;partir&nbsp;des&nbsp;**vecteurs&nbsp;TF-IDF&nbsp;enrichis**&nbsp;(1–3&nbsp;n-grams).<br>
+&nbsp;<br>
+Le&nbsp;modèle&nbsp;utilisé&nbsp;est&nbsp;une&nbsp;**régression&nbsp;logistique&nbsp;One-vs-Rest**,&nbsp;adaptée&nbsp;au&nbsp;multi-label&nbsp;:<br>
+un&nbsp;document&nbsp;peut&nbsp;appartenir&nbsp;à&nbsp;la&nbsp;fois&nbsp;aux&nbsp;deux&nbsp;classes.<br>
+&nbsp;<br>
+Fonction&nbsp;principale&nbsp;:<br>
+---------------------<br>
+-&nbsp;`<a href="#-train_tech">train_tech</a>()`&nbsp;:&nbsp;entraîne,&nbsp;évalue,&nbsp;puis&nbsp;sauvegarde&nbsp;le&nbsp;modèle&nbsp;final.<br>
+&nbsp;<br>
+Entrées&nbsp;:<br>
+---------<br>
+-&nbsp;`data/processed/tfidf_vectors.csv`&nbsp;:&nbsp;fichier&nbsp;contenant&nbsp;les&nbsp;vecteurs&nbsp;TF-IDF&nbsp;avec&nbsp;identifiant&nbsp;`doc`<br>
+-&nbsp;`data/labeled.csv`&nbsp;:&nbsp;fichier&nbsp;contenant&nbsp;les&nbsp;labels&nbsp;associés&nbsp;(`tech_y`)<br>
+&nbsp;<br>
+Sorties&nbsp;:<br>
+---------<br>
+-&nbsp;`models/lr_multilabel_techno_model.joblib`&nbsp;:&nbsp;modèle&nbsp;entraîné<br>
+-&nbsp;Affichage&nbsp;console&nbsp;des&nbsp;rapports&nbsp;de&nbsp;classification&nbsp;(précision,&nbsp;rappel,&nbsp;F1-score)<br>
+&nbsp;<br>
+Dépendances&nbsp;:<br>
+-------------<br>
+-&nbsp;pandas<br>
+-&nbsp;scikit-learn<br>
+-&nbsp;joblib<br>
+-&nbsp;os<br>
+&nbsp;<br>
+Auteur&nbsp;:<br>
+--------<br>
+Fait&nbsp;partie&nbsp;de&nbsp;la&nbsp;pipeline&nbsp;de&nbsp;classification&nbsp;documentaire&nbsp;par&nbsp;TF-IDF&nbsp;enrichi.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-train_tech"><strong>train_tech</strong></a>()</dt><dd><span class="code">Entraîne&nbsp;un&nbsp;modèle&nbsp;**multi-label&nbsp;Logistic&nbsp;Regression**&nbsp;pour&nbsp;prédire&nbsp;les&nbsp;technologies<br>
+(`hard`,&nbsp;`soft`,&nbsp;ou&nbsp;`both`)&nbsp;à&nbsp;partir&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF&nbsp;enrichis.<br>
+&nbsp;<br>
+Étapes&nbsp;principales&nbsp;:<br>
+--------------------<br>
+1.&nbsp;Chargement&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF&nbsp;et&nbsp;des&nbsp;labels&nbsp;(`labeled.csv`)<br>
+2.&nbsp;Nettoyage,&nbsp;harmonisation&nbsp;et&nbsp;fusion&nbsp;des&nbsp;données<br>
+3.&nbsp;Encodage&nbsp;des&nbsp;labels&nbsp;multi-label&nbsp;(`hard`,&nbsp;`soft`)<br>
+4.&nbsp;Séparation&nbsp;train/test&nbsp;(avec&nbsp;stratification)<br>
+5.&nbsp;Entraînement&nbsp;du&nbsp;modèle&nbsp;One-vs-Rest&nbsp;Logistic&nbsp;Regression<br>
+6.&nbsp;Évaluation&nbsp;du&nbsp;modèle&nbsp;sur&nbsp;le&nbsp;jeu&nbsp;de&nbsp;test<br>
+7.&nbsp;Ré-entraînement&nbsp;sur&nbsp;tout&nbsp;le&nbsp;dataset&nbsp;et&nbsp;sauvegarde&nbsp;du&nbsp;modèle&nbsp;final<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Le&nbsp;modèle&nbsp;est&nbsp;sauvegardé&nbsp;dans&nbsp;le&nbsp;répertoire&nbsp;`models/`&nbsp;sous&nbsp;le&nbsp;nom<br>
+&nbsp;&nbsp;&nbsp;&nbsp;`lr_multilabel_techno_model.joblib`.</span></dd></dl>
+</td></tr></table>
+</body></html>

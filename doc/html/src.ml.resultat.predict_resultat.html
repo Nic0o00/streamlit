@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.resultat.predict_resultat</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.resultat.html" class="white">resultat</a>.predict_resultat</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Cresultat%5Cpredict_resultat.py">c:\users\nicol\desktop\project_scoringapp\src\ml\resultat\predict_resultat.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;de&nbsp;prédiction&nbsp;`predict_resultat`.<br>
+&nbsp;<br>
+Ce&nbsp;script&nbsp;charge&nbsp;un&nbsp;modèle&nbsp;RandomForest&nbsp;préalablement&nbsp;entraîné&nbsp;sur&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF&nbsp;<br>
+et&nbsp;prédit&nbsp;le&nbsp;label&nbsp;`resultat`&nbsp;(classe&nbsp;du&nbsp;document)&nbsp;pour&nbsp;chaque&nbsp;document&nbsp;disponible&nbsp;<br>
+dans&nbsp;le&nbsp;fichier&nbsp;de&nbsp;vecteurs.<br>
+&nbsp;<br>
+Fonction&nbsp;principale&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;`<a href="#-predict_resultat">predict_resultat</a>()`:&nbsp;applique&nbsp;le&nbsp;modèle&nbsp;sur&nbsp;tous&nbsp;les&nbsp;documents&nbsp;pour&nbsp;générer&nbsp;des&nbsp;prédictions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;et&nbsp;sauvegarde&nbsp;les&nbsp;résultats&nbsp;dans&nbsp;un&nbsp;fichier&nbsp;CSV&nbsp;avec&nbsp;un&nbsp;score&nbsp;de&nbsp;confiance.<br>
+&nbsp;<br>
+Entrées&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;models/deck_classifier_rf.joblib&nbsp;:&nbsp;modèle&nbsp;entraîné&nbsp;(RandomForest)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;data/processed/tfidf_vectors.csv&nbsp;:&nbsp;vecteurs&nbsp;TF-IDF&nbsp;avec&nbsp;identifiant&nbsp;'doc'<br>
+&nbsp;<br>
+Sortie&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;output/predictions/tfidf_vectors_with_resultat_predictions.csv&nbsp;:&nbsp;fichier&nbsp;CSV&nbsp;contenant&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;doc&nbsp;:&nbsp;identifiant&nbsp;du&nbsp;document<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;predicted_resultat&nbsp;:&nbsp;classe&nbsp;prédite<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;confidence_score&nbsp;:&nbsp;probabilité&nbsp;maximale&nbsp;associée&nbsp;à&nbsp;la&nbsp;prédiction<br>
+&nbsp;<br>
+Auteur&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ce&nbsp;module&nbsp;s’inscrit&nbsp;dans&nbsp;la&nbsp;pipeline&nbsp;de&nbsp;classification&nbsp;documentaire&nbsp;par&nbsp;vecteurs&nbsp;TF-IDF.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-predict_resultat"><strong>predict_resultat</strong></a>()</dt><dd><span class="code">Applique&nbsp;le&nbsp;modèle&nbsp;RandomForest&nbsp;pour&nbsp;prédire&nbsp;la&nbsp;classe&nbsp;(`resultat`)<br>
+de&nbsp;chaque&nbsp;document&nbsp;à&nbsp;partir&nbsp;de&nbsp;ses&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Étapes&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;Chargement&nbsp;du&nbsp;modèle&nbsp;entraîné&nbsp;depuis&nbsp;le&nbsp;répertoire&nbsp;`models/`.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;Chargement&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF&nbsp;à&nbsp;prédire.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;Nettoyage&nbsp;des&nbsp;données&nbsp;(suppression&nbsp;des&nbsp;lignes&nbsp;sans&nbsp;'doc').<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4.&nbsp;Application&nbsp;du&nbsp;modèle&nbsp;pour&nbsp;générer&nbsp;la&nbsp;prédiction&nbsp;et&nbsp;la&nbsp;probabilité&nbsp;associée.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5.&nbsp;Export&nbsp;des&nbsp;résultats&nbsp;dans&nbsp;un&nbsp;fichier&nbsp;CSV&nbsp;de&nbsp;sortie.<br>
+&nbsp;<br>
+Sortie&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Fichier&nbsp;CSV&nbsp;contenant&nbsp;les&nbsp;prédictions&nbsp;et&nbsp;le&nbsp;score&nbsp;de&nbsp;confiance&nbsp;pour&nbsp;chaque&nbsp;document.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>BASE</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\resultat'<br>
+<strong>LABELED_CSV</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\resultat\..\..\..\data\labeled.csv'<br>
+<strong>MODEL_PATH</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\resultat\..\..\..\models\deck_classifier_rf.joblib'<br>
+<strong>OUTPUT_CSV</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml...tions\tfidf_vectors_with_resultat_predictions.csv'<br>
+<strong>VECT_CSV</strong> = r'C:\Users\nicol\Desktop\project_scoringapp\src\ml\resultat\..\..\..\data\processed\tfidf_vectors.csv'</td></tr></table>
+</body></html>

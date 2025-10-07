@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module src.ml.country.predict_country</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="src.html" class="white">src</a>.<a href="src.ml.html" class="white">ml</a>.<a href="src.ml.country.html" class="white">country</a>.predict_country</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cnicol%5Cdesktop%5Cproject_scoringapp%5Csrc%5Cml%5Ccountry%5Cpredict_country.py">c:\users\nicol\desktop\project_scoringapp\src\ml\country\predict_country.py</a></td></tr></table>
+    <p><span class="code">Module&nbsp;`predict_country`&nbsp;pour&nbsp;prédire&nbsp;le&nbsp;pays&nbsp;d'un&nbsp;document.<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;charge&nbsp;un&nbsp;modèle&nbsp;Gradient&nbsp;Boosting&nbsp;entraîné&nbsp;sur&nbsp;des&nbsp;vecteurs&nbsp;TF-IDF<br>
+afin&nbsp;de&nbsp;prédire&nbsp;la&nbsp;probabilité&nbsp;d'appartenance&nbsp;de&nbsp;chaque&nbsp;document&nbsp;à&nbsp;un&nbsp;pays&nbsp;donné.<br>
+&nbsp;<br>
+Fonctionnalités&nbsp;principales&nbsp;:<br>
+-&nbsp;Chargement&nbsp;du&nbsp;modèle&nbsp;et&nbsp;de&nbsp;l'encodeur&nbsp;sauvegardés&nbsp;(LabelEncoder)<br>
+-&nbsp;Prédiction&nbsp;des&nbsp;probabilités&nbsp;par&nbsp;classe&nbsp;à&nbsp;partir&nbsp;de&nbsp;TF-IDF<br>
+-&nbsp;Application&nbsp;d’un&nbsp;seuil&nbsp;de&nbsp;confiance&nbsp;pour&nbsp;marquer&nbsp;les&nbsp;cas&nbsp;incertains&nbsp;en&nbsp;"unknown"<br>
+-&nbsp;Export&nbsp;d’un&nbsp;fichier&nbsp;CSV&nbsp;contenant&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;les&nbsp;documents<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;la&nbsp;prédiction&nbsp;finale&nbsp;du&nbsp;pays<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;la&nbsp;probabilité&nbsp;associée<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;les&nbsp;probabilités&nbsp;détaillées&nbsp;pour&nbsp;chaque&nbsp;pays</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+</td><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-predict_country"><strong>predict_country</strong></a>()</dt><dd><span class="code">Prédit&nbsp;le&nbsp;pays&nbsp;d’origine&nbsp;de&nbsp;chaque&nbsp;document&nbsp;à&nbsp;partir&nbsp;de&nbsp;ses&nbsp;vecteurs&nbsp;TF-IDF.<br>
+&nbsp;<br>
+Cette&nbsp;fonction&nbsp;charge&nbsp;un&nbsp;modèle&nbsp;Gradient&nbsp;Boosting&nbsp;et&nbsp;un&nbsp;encodeur&nbsp;de&nbsp;labels<br>
+pour&nbsp;prédire&nbsp;la&nbsp;probabilité&nbsp;d’appartenance&nbsp;de&nbsp;chaque&nbsp;document&nbsp;à&nbsp;une&nbsp;classe<br>
+de&nbsp;pays.&nbsp;Les&nbsp;résultats&nbsp;sont&nbsp;sauvegardés&nbsp;dans&nbsp;un&nbsp;fichier&nbsp;CSV&nbsp;de&nbsp;sortie&nbsp;avec<br>
+toutes&nbsp;les&nbsp;probabilités&nbsp;et&nbsp;la&nbsp;classe&nbsp;prédite.<br>
+&nbsp;<br>
+Étapes&nbsp;principales&nbsp;:<br>
+--------------------<br>
+1.&nbsp;Charger&nbsp;le&nbsp;modèle&nbsp;et&nbsp;l’encodeur&nbsp;depuis&nbsp;le&nbsp;dossier&nbsp;`models/`.<br>
+2.&nbsp;Charger&nbsp;les&nbsp;vecteurs&nbsp;TF-IDF&nbsp;depuis&nbsp;`data/processed/tfidf_vectors.csv`.<br>
+3.&nbsp;Vérifier&nbsp;que&nbsp;les&nbsp;features&nbsp;correspondent&nbsp;à&nbsp;celles&nbsp;attendues&nbsp;par&nbsp;le&nbsp;modèle.<br>
+4.&nbsp;Calculer&nbsp;les&nbsp;probabilités&nbsp;pour&nbsp;chaque&nbsp;classe&nbsp;(pays).<br>
+5.&nbsp;Appliquer&nbsp;un&nbsp;seuil&nbsp;de&nbsp;confiance&nbsp;(`threshold`)&nbsp;pour&nbsp;filtrer&nbsp;les&nbsp;prédictions&nbsp;incertaines.<br>
+6.&nbsp;Sauvegarder&nbsp;un&nbsp;CSV&nbsp;contenant&nbsp;toutes&nbsp;les&nbsp;prédictions&nbsp;et&nbsp;probabilités.<br>
+&nbsp;<br>
+Paramètres&nbsp;:<br>
+------------<br>
+threshold&nbsp;:&nbsp;float,&nbsp;optionnel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Seuil&nbsp;minimal&nbsp;de&nbsp;probabilité&nbsp;pour&nbsp;accepter&nbsp;une&nbsp;prédiction.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Si&nbsp;la&nbsp;probabilité&nbsp;maximale&nbsp;&lt;&nbsp;threshold,&nbsp;le&nbsp;pays&nbsp;est&nbsp;marqué&nbsp;"unknown".<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(Valeur&nbsp;par&nbsp;défaut&nbsp;:&nbsp;0.3)</span></dd></dl>
+</td></tr></table>
+</body></html>
