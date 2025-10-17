@@ -8,16 +8,18 @@ BASE_DIR = os.path.dirname(__file__)
 DECKS_DIR = os.path.join(BASE_DIR, "data", "decks")
 TRANSLATED_DIR = os.path.join(BASE_DIR, "data", "processed", "translated")
 
+# --- Upload et traitement PDF ---
 uploaded_file_names = upload_and_process_files(DECKS_DIR, TRANSLATED_DIR)
+
 # --- Bouton vectorisation et prédictions (seulement si des fichiers uploadés) ---
-if uploaded_file_names:  # seulement s'il y a des fichiers uploadés
+if uploaded_file_names:
     if st.button("🚀 Lancer vectorisation et prédictions"):
         lancer_vectorisation_et_predictions(uploaded_file_names)
         st.session_state["vectorisation_done"] = True
 else:
     st.info("📂 Téléversez au moins un fichier PDF pour lancer la vectorisation et les prédictions.")
 
-# Barre latérale pour les anciens decks
+# --- Barre latérale : decks existants ---
 st.sidebar.header("📂 Decks disponibles")
 all_decks = [f for f in os.listdir(DECKS_DIR) if f.endswith(".pdf")]
 if all_decks:
@@ -26,7 +28,9 @@ if all_decks:
         if st.sidebar.button("👁️ Voir le résultat"):
             st.session_state["deck_a_afficher"] = selected_deck
 
-# Affichage simulé pop-up
+
+
+# --- Affichage simulé pop-up pour un deck sélectionné ---
 if "deck_a_afficher" in st.session_state:
     st.markdown("---")
     with st.expander(f"📊 Résultats pour {st.session_state['deck_a_afficher']}", expanded=True):
@@ -34,8 +38,8 @@ if "deck_a_afficher" in st.session_state:
         if st.button("Fermer la fenêtre"):
             del st.session_state["deck_a_afficher"]
 
-# Bouton pour voir les résultats des fichiers uploadés
-if st.session_state.get("vectorisation_done", False):
+# --- Bouton pour voir les résultats des fichiers uploadés ---
+if st.session_state.get("vectorisation_done", False) and uploaded_file_names:
     if st.button("📊 Voir les résultats des fichiers uploadés"):
         for name in uploaded_file_names:
             with st.expander(f"📄 Résultat : {name}", expanded=True):

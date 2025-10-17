@@ -21,7 +21,7 @@ def upload_and_process_files(decks_dir, translated_dir):
             file_path = os.path.join(decks_dir, uploaded_file.name)
             txt_path = os.path.join(translated_dir, uploaded_file.name.replace(".pdf", ".txt"))
 
-            # Extraire le texte du PDF (avant d'écrire quoi que ce soit)
+            # Extraire le texte du PDF
             try:
                 uploaded_file.seek(0)
                 new_text = extract_text_from_pdf(uploaded_file)
@@ -32,40 +32,46 @@ def upload_and_process_files(decks_dir, translated_dir):
                 st.error(f"❌ Erreur lors de l'extraction de {uploaded_file.name} : {e}")
                 continue
 
-            key_prefix = uploaded_file.name.replace(".", "_")  # clé unique pour session_state
+            key_prefix = uploaded_file.name.replace(".", "_")
 
-            # --- Cas fichier déjà existant ---
+            # Cas fichier déjà existant
             if os.path.exists(file_path):
-                st.warning(f"⚠️ Le fichier `{uploaded_file.name}` existe déjà dans `data/decks`.")
+                st.warning(f"⚠️ Le fichier `{uploaded_file.name}` existe déjà.")
 
-                if key_prefix not in st.session_state:
-                    st.session_state[key_prefix] = None
+                if f"{key_prefix}_option" not in st.session_state:
+                    st.session_state[f"{key_prefix}_option"] = None
 
-                # Choix utilisateur
+                # Radio pour choix utilisateur
                 option = st.radio(
-                    f"Que voulez-vous faire pour `{uploaded_file.name}` ?",
+                    f"Que faire pour `{uploaded_file.name}` ?",
                     ("Écraser", "Renommer", "Comparer avant décision"),
-                    key=f"radio_{key_prefix}"
+                    key=f"{key_prefix}_radio"
                 )
+                st.session_state[f"{key_prefix}_option"] = option
 
+                # Si comparaison
+                similarity = None
                 if option == "Comparer avant décision":
                     existing_text = ""
                     if os.path.exists(txt_path):
                         with open(txt_path, "r", encoding="utf-8") as f:
                             existing_text = f.read()
                     similarity = compare_texts(existing_text, new_text, uploaded_file.name)
-        
+                    st.info(f"💡 Similarité : {similarity:.2f}%" if similarity is not None else "")
 
+                # Bouton de validation
                 if st.button(f"Valider le choix pour {uploaded_file.name}", key=f"btn_{key_prefix}"):
-                    if option == "Écraser":
+                    choice = st.session_state[f"{key_prefix}_option"]
+
+                    if choice == "Écraser":
                         with open(file_path, "wb") as f:
                             f.write(uploaded_file.getbuffer())
                         with open(txt_path, "w", encoding="utf-8") as f:
                             f.write(new_text)
-                        st.success(f"💾 Fichier `{uploaded_file.name}` écrasé.")
+                        st.success(f"💾 `{uploaded_file.name}` écrasé.")
                         uploaded_file_names.append(uploaded_file.name)
 
-                    elif option == "Renommer" or (option == "Comparer avant décision" and st.session_state.get(f"decision_{key_prefix}") == "Renommer"):
+                    elif choice == "Renommer" or (choice == "Comparer avant décision" and st.session_state.get(f"{key_prefix}_decision") == "Renommer"):
                         i = 1
                         new_name = uploaded_file.name.replace(".pdf", f"_{i}.pdf")
                         while os.path.exists(os.path.join(decks_dir, new_name)):
@@ -80,6 +86,21 @@ def upload_and_process_files(decks_dir, translated_dir):
                         st.success(f"💾 Nouveau fichier enregistré sous `{new_name}`")
                         uploaded_file_names.append(new_name)
 
-                    elif option == "Comparer avant décision":
-                        # stocker décision pour réutilisation si besoin
-                        st.session_state[f"decision_{key_prefix}"] = "Écraser"  # ou "Renommer" selon choix
+                    elif choice == "Comparer avant décision":
+                        st.session_state[f"{key_prefix}_decision"] = "Écraser"  # ou "Renommer", l'utilisateur peut re-sélectionner
+                        st.info("💡 Choisissez Écraser ou Renommer puis validez à nouveau.")
+
+            else:
+                # Fichier n'existe pas, sauvegarde directe
+                with open(file_path, "wb") as f:
+                    f.write(uploaded_file.getbuffer())
+                with open(txt_path, "w", encoding="utf-8") as f:
+                    f.write(new_text)
+                st.success(f"💾 `{uploaded_file.name}` enregistré.")
+                uploaded_file_names.append(uploaded_file.name)
+
+            # Aperçu du texte
+            with st.expander(f"🔍 Aperçu : {uploaded_file.name}", expanded=False):
+                st.text_area("", new_text, height=250)
+
+    return uploaded_file_names

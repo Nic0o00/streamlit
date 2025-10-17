@@ -31,7 +31,7 @@ VECT_CSV = os.path.join(BASE, "..", "..", "..", "data", "processed", "tfidf_vect
 LABELED_CSV = os.path.join(BASE, "..", "..", "..", "data", "labeled.csv")
 MODEL_PATH = os.path.join(BASE, "..", "..", "..", "models", "deck_classifier_rf.joblib")
 
-def main():
+def train_resultat():
     """
     Fonction principale d'entraînement du modèle RandomForestClassifier.
 
@@ -88,4 +88,4 @@ def main():
 
 # --- Point d’entrée du script ---
 if __name__ == "__main__":
-    main()
+    train_resultat()
